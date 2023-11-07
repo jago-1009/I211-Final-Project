@@ -3,10 +3,10 @@
 /**
  * Author: Jacob Garwood
  * Date: 11/7/2023
- * File: index_view.class.php
+ * File: photos_model.class.php
  * Description:
  */
-class IndexView
+class photos_model
 {
 
 }
