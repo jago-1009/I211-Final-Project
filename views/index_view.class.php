@@ -6,7 +6,5 @@
  * File: index_view.class.php
  * Description:
  */
-class IndexView
-{
 
-}
+
