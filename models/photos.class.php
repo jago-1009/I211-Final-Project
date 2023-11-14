@@ -6,74 +6,78 @@
  * File: photos.class.php
  * Description:
  */
-//class Photos
-//{
-//    //properties of a Photo object
-//    private $id, $product_name, $description, $author,  $price, $img;
-//
-////constructor that initializes photo properties
-//    public function __construct( $id, $product_name, $desc, $author, $price, $img) {
-//        $this->id = $id;
-//        $this->product_name = $product_name;
-//        $this->description = $desc;
-//        $this->author = $author;
-//        $this->price = $price;
-//        $this->img = $img;
-//    }
-//
-//    /**
-//     * @param mixed $id
-//     */
-//    public function setId($id)
-//    {
-//        $this->id = $id;
-//    }
-//
-//    /**
-//     * @return mixed
-//     */
-//    public function getId()
-//    {
-//        return $this->id;
-//    }
-//
-//
-//
-//    /*
-//     * @return mixed
-//     */
-//    public function getName()
-//    {
-//        return $this->product_name;
-//    }
-//
-//    /*
-//     * @return mixed
-//     */
-//    public function getDescription()
-//    {
-//        return $this->description;
-//    }
-//
-//    /*
-//     * @return mixed
-//     */
-//    public function getAuthor()
-//    {
-//        return $this->author;
-//    }
-//
-//    /*
-//     * @return mixed
-//     */
-//    public function getPrice()
-//    {
-//        return $this->price;
-//    }
-//
-//    public function getImage()
-//    {
-//        return $this->img;
-//    }
-//
-//}
+class Photos
+{
+    //properties of a Photo object
+    private $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
+
+//constructor that initializes photo properties
+
+    public function __construct($photoId, $size, $camera, $title, $description, $creationDate, $imgPath)
+    {
+        $this->photoId = $photoId;
+        $this->size = $size;
+        $this->camera = $camera;
+        $this->title = $title;
+        $this->description = $description;
+        $this->creationDate = $creationDate;
+        $this->imgPath = $imgPath;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhotoId()
+    {
+        return $this->photoId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCamera()
+    {
+        return $this->camera;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreationDate()
+    {
+        return $this->creationDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImgPath()
+    {
+        return $this->imgPath;
+    }
+
+}
