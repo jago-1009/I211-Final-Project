@@ -14,7 +14,9 @@ return array(
     'Dispatcher' => $baseDir . '/application/dispatcher.class.php',
     'PhotoController' => $baseDir . '/controllers/photo_controller.class.php',
     'PhotoModel' => $baseDir . '/models/photos_model.class.php',
+    'PhotoView' => $baseDir . '/views/photo/photo_view.class.php',
     'Photos' => $baseDir . '/models/photos.class.php',
     'UserController' => $baseDir . '/controllers/user_controller.class.php',
+    'View' => $baseDir . '/views/index_view.class.php',
     'WelcomeController' => $baseDir . '/controllers/welcome_controller.class.php',
 );

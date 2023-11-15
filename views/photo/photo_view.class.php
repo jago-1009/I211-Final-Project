@@ -2,7 +2,7 @@
 /**
  * Author: Nate Osborne
  * Date: 11/15/2023
- * File Name: photo_index.class.php
+ * File Name: photo_view.class.php
  * Description:
  */
 
@@ -23,6 +23,7 @@ class PhotoView extends View {
                     $size = $photo->getSize();
                     $camera = $photo->getCamera();
                     $decription = $photo->getDescription();
+                    
                 }
             }
             ?>

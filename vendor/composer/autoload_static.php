@@ -15,8 +15,10 @@ class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
         'Dispatcher' => __DIR__ . '/../..' . '/application/dispatcher.class.php',
         'PhotoController' => __DIR__ . '/../..' . '/controllers/photo_controller.class.php',
         'PhotoModel' => __DIR__ . '/../..' . '/models/photos_model.class.php',
+        'PhotoView' => __DIR__ . '/../..' . '/views/photo/photo_view.class.php',
         'Photos' => __DIR__ . '/../..' . '/models/photos.class.php',
         'UserController' => __DIR__ . '/../..' . '/controllers/user_controller.class.php',
+        'View' => __DIR__ . '/../..' . '/views/index_view.class.php',
         'WelcomeController' => __DIR__ . '/../..' . '/controllers/welcome_controller.class.php',
     );
 

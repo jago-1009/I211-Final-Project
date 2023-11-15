@@ -36,7 +36,8 @@ class PhotoModel
 
             //loop through all rows
             while ($query_row = $query->fetch_assoc()) {
-                $photosNew = new Photos($query_row["photoID"],
+                //push the photos into the array
+                $photos[] = new Photos($query_row["photoID"],
                     // $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
                     $query_row["imgPath"],
                     $query_row["title"],
@@ -46,9 +47,6 @@ class PhotoModel
                     $query_row["photographerID"]);
 
 
-
-                //push the photos into the array
-                $photos[] = $photosNew;
             }
             return $photos;
         }
@@ -123,8 +121,6 @@ class PhotoModel
             $photo->setId($obj->product_id);
 
             //create a photo object
-            //$photo = new Photo(stripslashes($obj->product_name), stripslashes($obj->description), stripslashes($obj->author), stripslashes($obj->price), stripslashes($obj->image) );
-
 
 
 
