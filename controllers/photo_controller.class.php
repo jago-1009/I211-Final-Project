@@ -83,9 +83,7 @@ class PhotoController {
     //search the database for photos that match words in titles. Return an array of photos if successful; false otherwise.
     public function search_photo($terms) {
         $terms = explode(" ", $terms); //explode multiple terms into an array
-        //select statement for AND search
-        $sql = "SELECT * FROM " . $this->tblProducts ."," .$this->tblOrder_details.
-            " WHERE " . $this->tblProducts . ".product_name=" . $this->tblOrder_details . ".product_id AND (1";
+
 
         foreach ($terms as $term) {
             $sql .= " AND product_name LIKE '%" . $term . "%'";
@@ -111,7 +109,7 @@ class PhotoController {
 
         //loop through all rows in the returned recordsets
         while ($obj = $query->fetch_object()) {
-            $photo = new Photo($obj->product_name, $obj->description, $obj->author, $obj->price, $obj->img);
+            $photo = new Photo($obj->product_name, $obj->description, $obj->author, $obj->img);
 
             //set the id for the photo
             $photo->setId($obj->id);
