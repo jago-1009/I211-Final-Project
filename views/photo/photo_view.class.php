@@ -20,16 +20,19 @@ class PhotoView extends View {
             } else {
                 foreach ($photos as $photo){
                     $id = $photo->getPhotoId();
+                    $imgPath = $photo->getImgPath();
                     $size = $photo->getSize();
                     $camera = $photo->getCamera();
-                    $decription = $photo->getDescription();
+                    $description = $photo->getDescription();
+
+                    echo "<h1>$id</h1><h2>$imgPath</h2><h3>$size</h3><h4>$camera</h4><h5>$description</h5>";
 
                 }
             }
             ?>
         </div>
 <?php
-        parent::displayfooter();
+//        parent::displayfooter();
     }
 }
 ?>

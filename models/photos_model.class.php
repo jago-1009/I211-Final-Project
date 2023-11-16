@@ -37,14 +37,19 @@ class PhotoModel
             //loop through all rows
             while ($query_row = $query->fetch_assoc()) {
                 //push the photos into the array
+                // $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
                 $photos[] = new Photos($query_row["photoID"],
-                    // $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
-                    $query_row["imgPath"],
-                    $query_row["title"],
-                    $query_row["camera"],
                     $query_row["size"],
+                    $query_row["camera"],
+                    $query_row["title"],
                     $query_row["description"],
-                    $query_row["photographerID"]);
+                    $query_row["creationDate"],
+                    $query_row["imgPath"]);
+
+
+
+
+
 
 
             }
@@ -87,10 +92,9 @@ class PhotoModel
         //loop through all rows in the returned recordsets
         while ($obj = $query->fetch_object()) {
             // $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
-            $photo = new Photo($obj->photoID, $obj->size, $obj->camera, $obj->title, $obj->description, $obj->imgPath,$obj->creationDate);
-
+            $photo = new Photo($obj->photoID,$obj->size,$obj->camera, $obj->title, $obj->description,$obj->creationDate,$obj->imgPath);
             //add the photo into the array
-            $photos[] = $photo;
+            $photos[] += $photo;
         }
 
         return $photos;
@@ -103,7 +107,7 @@ class PhotoModel
 
         $sql = "SELECT * FROM " . $this->tblPhotos ."," .$this->tblPhotographers.
             " WHERE " . $this->tblPhotos . ".photographerID =" . $this->tblPhotographers . ".photographerID" .
-            " AND " . $this->tblPhotos . " .product_id='$id'";
+            " AND " . $this->tblPhotos . " .photoID='$id'";
 
         $query = $this->dbConnection->query($sql);
 
@@ -115,7 +119,7 @@ class PhotoModel
             $obj = $query->fetch_object();
 
             //create a photo object
-            $photo = new Photo(null,$obj->product_name, $obj->description, $obj->author, $obj->price, $obj->img);
+            $photo = new Photo(null, $obj->product_name, $obj->description, $obj->author, $obj->img);
 
             //set the id for the product
             $photo->setId($obj->product_id);
