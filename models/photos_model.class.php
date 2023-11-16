@@ -45,13 +45,6 @@ class PhotoModel
                     $query_row["description"],
                     $query_row["creationDate"],
                     $query_row["imgPath"]);
-
-
-
-
-
-
-
             }
             return $photos;
         }
