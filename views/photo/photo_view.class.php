@@ -23,7 +23,7 @@ class PhotoView extends View {
                     $size = $photo->getSize();
                     $camera = $photo->getCamera();
                     $decription = $photo->getDescription();
-                    
+
                 }
             }
             ?>
