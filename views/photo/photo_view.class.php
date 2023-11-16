@@ -11,7 +11,9 @@ class PhotoView extends View {
         parent::displayheader("Photo Library");
         ?>
 
-        <div class="header">Photographs</div>
+            <div class="head">
+                <p class="header">Photographs</p>
+            </div>
 
         <div class="container">
             <?php
@@ -24,15 +26,17 @@ class PhotoView extends View {
                     $size = $photo->getSize();
                     $camera = $photo->getCamera();
                     $description = $photo->getDescription();
+                    $title = $photo->getTitle();
 
-                    echo "<h1>$id</h1><h2>$imgPath</h2><h3>$size</h3><h4>$camera</h4><h5>$description</h5>";
-
+                    echo "<div class='photo-list'>
+                        <div class='image'><img src='" . $imgPath . "'></div><h1>$id</h1><h1>$title</h1><h2>$imgPath</h2><h3>$size</h3><h4>$camera</h4><h5>$description</h5>
+                    </div>";
                 }
             }
             ?>
         </div>
 <?php
-//        parent::displayfooter();
+        parent::displayfooter();
     }
 }
 ?>
