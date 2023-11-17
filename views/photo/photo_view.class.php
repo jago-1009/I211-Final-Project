@@ -29,7 +29,7 @@ class PhotoView extends View {
                     $title = $photo->getTitle();
 
                     echo "<div class='photo-list'>
-                        <div class='image'><img src='" . $imgPath . "'></div><h1>$id</h1><h1>$title</h1><h2>$imgPath</h2><h3>$size</h3><h4>$camera</h4><h5>$description</h5>
+                        <div class='image'><img src='" . $imgPath . "'></div><div class='photo-list-details'><h1>$title</h1><h4>$size</h4><h4>$camera</h4><p>$description</p><p>ID: $id</p><p>$imgPath</p></div>
                     </div>";
                 }
             }

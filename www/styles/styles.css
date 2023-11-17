@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Microsoft Sans Serif";
+    background-color: #f7f7f7;
 }
 
 .nav{
@@ -40,7 +41,6 @@
 .links a{
     text-decoration: none;
     color: black;
-
 }
 
 .header {
@@ -73,5 +73,28 @@
 
 .image{
     height: 300px;
+    width: 300px;
     background-color: lightgray;
+}
+
+.image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.photo-list-details{
+    padding-top: 10px;
+}
+
+.photo-list-details h1{
+    padding-bottom: 5px;
+}
+
+.photo-list-details h4{
+    padding-top: 10px;
+}
+
+.photo-list-details p{
+    padding-top: 10px;
 }
