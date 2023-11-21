@@ -1,9 +1,10 @@
 <?php
 /**
- * Author: Nate Osborne
- * Date: 11/15/2023
- * File Name: photo_view.class.php
- * Description:
+
+Author: Nate Osborne
+Date: 11/15/2023
+File Name: photo_view.class.php
+Description:
  */
 
 class PhotoView extends View {
@@ -11,9 +12,9 @@ class PhotoView extends View {
         parent::displayheader("Photo Library");
         ?>
 
-            <div class="head">
-                <p class="header">Photographs</p>
-            </div>
+        <div class="head">
+            <p class="header">Photographs</p>
+        </div>
 
         <div class="container">
             <?php
@@ -35,7 +36,7 @@ class PhotoView extends View {
             }
             ?>
         </div>
-<?php
+        <?php
         parent::displayfooter();
     }
 }
