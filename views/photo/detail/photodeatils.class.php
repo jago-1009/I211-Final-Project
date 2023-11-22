@@ -17,16 +17,10 @@ class PhotoDetail extends PhotoIndex {
         $camera = $photo->getCamera();
         $description = $photo->getDescription();
         $title = $photo->getTitle();
+        $creationDate = $photo->getCreationDate();
 
-        //retrieve photo details by calling get methods
-        $id = $photo->getId();
-        $name = $photo->getName();
-        $desc = $photo->getDescription();
-        $author = $photo->getAuthor();
-        $price = $photo->getPrice();
-        $image = $photo->getImage();
-        if (strpos($image, "http://") === false and strpos($image, "https://") === false) {
-            $image = BASE_URL . "/" . PHOTO_IMG . $image;
+        if (strpos($imgPath, "http://") === false and strpos($imgPath, "https://") === false) {
+            $imgPath = BASE_URL . "/" . PHOTO_IMG . $imgPath;
         }
         ?>
 
@@ -36,23 +30,27 @@ class PhotoDetail extends PhotoIndex {
         <table id="detail">
             <tr>
                 <td style="width: 150px;">
-                    <img src="<?= $image ?>" alt="<?= $name ?>" />
+                    <img src="<?= $imgPath ?>" alt="<?= $title ?>" />
                 </td>
                 <td style="width: 130px;">
-                    <p><strong>Product Name:</strong></p>
+                    <p><strong>Title:</strong></p>
                     <p><strong>Description:</strong></p>
-                    <p><strong>Author:</strong></p>
-                    <p><strong>Price:</strong></p>
+                    <p><strong>Size:</strong></p>
+                    <p><strong>Camera:</strong></p>
+                    <p><strong>Creation Date:</strong></p>
+                    <p><strong>ID:</strong></p>
                     <div id="button-group">
                         <input type="button" id="edit-button" value="   Edit   "
                                onclick="window.location.href = '<?= BASE_URL ?>/photo/edit/<?= $id ?>'">&nbsp;
                     </div>
                 </td>
                 <td>
-                    <p><?= $name ?></p>
-                    <p><?= $desc ?></p>
-                    <p><?= $author ?></p>
-                    <p><?= $price ?></p>
+                    <p><?= $title ?></p>
+                    <p><?= $description ?></p>
+                    <p><?= $size ?></p>
+                    <p><?= $camera ?></p>
+                    <p><?= $creationDate ?></p>
+                    <p><?= $id ?></p>
                     <div id="confirm-message"><?= $confirm ?></div>
                 </td>
             </tr>
