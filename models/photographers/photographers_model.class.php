@@ -3,7 +3,7 @@
 /**
  * Author: Jacob Garwood
  * Date: 11/21/2023
- * File: photographers_model.class.php
+ * File: collections_model.class.php
  * Description:
  */
 class PhotographersModel
@@ -97,7 +97,7 @@ class PhotographersModel
 
         $sql = "SELECT * FROM " . $this->tblPhotos ."," .$this->tblPhotographers.
             " WHERE " . $this->tblPhotos . ".photographerID =" . $this->tblPhotographers . ".photographerID" .
-            " AND " . $this->tblPhotos . " .photoID='$id'";
+            "";
 
         $query = $this->dbConnection->query($sql);
 
@@ -119,7 +119,7 @@ class PhotographersModel
 
 
 
-            return $photo;
+            return $photographer;
         }
 
 

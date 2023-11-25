@@ -22,7 +22,7 @@ return array(
     'PhotoSearch' => $baseDir . '/views/photo/search/photo_search.class.php',
     'PhotoView' => $baseDir . '/views/photo/photo_view.class.php',
     'Photographers' => $baseDir . '/models/photographers/photographers.class.php',
-    'PhotographersModel' => $baseDir . '/models/photographers/photographers_model.class.php',
+    'PhotographersModel' => $baseDir . '/models/photographers/collections_model.class.php',
     'Photos' => $baseDir . '/models/photos/photos.class.php',
     'UserController' => $baseDir . '/controllers/user_controller.class.php',
     'UserError' => $baseDir . '/views/user/error/error.class.php',
