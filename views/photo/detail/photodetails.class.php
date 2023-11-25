@@ -2,7 +2,7 @@
 /**
  * Name : Deep Patel
  * Date : 11/21/23
- * File : photodeatils.class.php
+ * File : photodetails.class.php
  * Description:
  */
 class PhotoDetail extends PhotoIndex {
@@ -30,7 +30,7 @@ class PhotoDetail extends PhotoIndex {
         <table id="detail">
             <tr>
                 <td style="width: 150px;">
-                    <img src="<?= $imgPath ?>" alt="<?= $title ?>" />
+                    <img src="../../<?= $imgPath ?>" alt="<?= $title ?>" />
                 </td>
                 <td style="width: 130px;">
                     <p><strong>Title:</strong></p>

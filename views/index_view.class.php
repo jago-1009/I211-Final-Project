@@ -19,16 +19,18 @@ static public function displayheader($page_title) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link type='text/css' rel='stylesheet' href='www/styles/styles.css' />
+    <link type='text/css' rel='stylesheet' href='../www/styles/styles.css' />
     <title>Document</title>
     <div class="nav">
         <div class="home">
-            <a href="">Home</a>
+            <a href="<?= BASE_URL ?>/index">Home</a>
         </div>
         <div class="links">
-            <a href="">Collections</a>
+            <a href="<?= BASE_URL ?>/photo/index">Our Photos</a>
             <p>|</p>
-            <a href="">Photographers</a>
+            <a href="<?= BASE_URL ?>/photographer/index">Photographers</a>
+            <p>|</p>
+            <a href="<?= BASE_URL ?>/collection/index">Collections</a>
             <p>|</p>
             <a href="">Log In</a>
         </div>

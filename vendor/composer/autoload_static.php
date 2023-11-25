@@ -16,7 +16,7 @@ class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
         'Login' => __DIR__ . '/../..' . '/views/user/login/login.class.php',
         'Logout' => __DIR__ . '/../..' . '/views/user/logout/logout.class.php',
         'PhotoController' => __DIR__ . '/../..' . '/controllers/photo_controller.class.php',
-        'PhotoDetail' => __DIR__ . '/../..' . '/views/photo/detail/photodeatils.class.php',
+        'PhotoDetail' => __DIR__ . '/../..' . '/views/photo/detail/photodetails.class.php',
         'PhotoError' => __DIR__ . '/../..' . '/views/photo/error/photoerror.class.php',
         'PhotoIndex' => __DIR__ . '/../..' . '/views/photo/index/photoindex.class.php',
         'PhotoModel' => __DIR__ . '/../..' . '/models/photos/photos_model.class.php',

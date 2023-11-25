@@ -15,7 +15,7 @@ return array(
     'Login' => $baseDir . '/views/user/login/login.class.php',
     'Logout' => $baseDir . '/views/user/logout/logout.class.php',
     'PhotoController' => $baseDir . '/controllers/photo_controller.class.php',
-    'PhotoDetail' => $baseDir . '/views/photo/detail/photodeatils.class.php',
+    'PhotoDetail' => $baseDir . '/views/photo/detail/photodetails.class.php',
     'PhotoError' => $baseDir . '/views/photo/error/photoerror.class.php',
     'PhotoIndex' => $baseDir . '/views/photo/index/photoindex.class.php',
     'PhotoModel' => $baseDir . '/models/photos/photos_model.class.php',

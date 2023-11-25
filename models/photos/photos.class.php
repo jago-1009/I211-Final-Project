@@ -80,4 +80,11 @@ class Photos
         return $this->imgPath;
     }
 
+    /**
+     * @param mixed $photoId
+     */
+    public function setId($photoId): void
+    {
+        $this->photoId = $photoId;
+    }
 }

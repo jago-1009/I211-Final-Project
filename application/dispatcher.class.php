@@ -33,7 +33,7 @@ class Dispatcher {
         }
 
 
-        $controllerName = !empty($url_array[0]) ? ucfirst($url_array[0]) . 'Controller' : 'PhotoController';
+        $controllerName = !empty($url_array[0]) ? ucfirst($url_array[0]) . 'Controller' : 'WelcomeController';
 
         //create controller instance
         if (!class_exists($controllerName)) {

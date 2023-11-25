@@ -85,7 +85,7 @@ class PhotoModel
         //loop through all rows in the returned recordsets
         while ($obj = $query->fetch_object()) {
             // $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
-            $photo = new Photo($obj->photoID,$obj->size,$obj->camera, $obj->title, $obj->description,$obj->creationDate,$obj->imgPath);
+            $photo = new Photos($obj->photoID,$obj->size,$obj->camera, $obj->title, $obj->description,$obj->creationDate,$obj->imgPath);
             //add the photo into the array
             $photos[] += $photo;
         }
@@ -112,10 +112,10 @@ class PhotoModel
             $obj = $query->fetch_object();
 
             //create a photo object
-            $photo = new Photo($obj->photoID,$obj->size,$obj->camera, $obj->title, $obj->description,$obj->creationDate,$obj->imgPath);
+            $photo = new Photos($obj->photoID,$obj->size,$obj->camera, $obj->title, $obj->description,$obj->creationDate,$obj->imgPath);
 
             //set the id for the product
-            $photo->setId($obj->product_id);
+            $photo->setId($obj->photoID);
 
             //create a photo object
 

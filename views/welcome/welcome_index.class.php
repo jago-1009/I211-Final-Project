@@ -10,9 +10,11 @@ class WelcomeIndex extends View {
 
     public function display() {
         //display page header
-        parent::displayHeader();
+        parent::displayHeader("Welcome");
         ?>
-            <div>Welcome to Photo Gallery!</div>
+        <link type='text/css' rel='stylesheet' href='./www/styles/styles.css' />
+
+        <div>Welcome to Photo Gallery!</div>
         <?php
         //display page footer
         parent::displayFooter();
