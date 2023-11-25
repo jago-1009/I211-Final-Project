@@ -112,7 +112,7 @@ class PhotoModel
             $obj = $query->fetch_object();
 
             //create a photo object
-            $photo = new Photo(null, $obj->product_name, $obj->description, $obj->author, $obj->img);
+            $photo = new Photo($obj->photoID,$obj->size,$obj->camera, $obj->title, $obj->description,$obj->creationDate,$obj->imgPath);
 
             //set the id for the product
             $photo->setId($obj->product_id);
