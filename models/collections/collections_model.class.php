@@ -36,7 +36,7 @@ class CollectionsModel
                 $collections[] = new Collections($query_row["collectionID"],
                     $query_row["title"],
                     $query_row["description"],
-                    $query_row["active"],
+                    $query_row["active"]
 
                 );
             }

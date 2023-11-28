@@ -6,6 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Collections' => $baseDir . '/models/collections/collections.class.php',
+    'CollectionsModel' => $baseDir . '/models/collections/collections_model.class.php',
     'ComposerAutoloaderInit65a336f8c5b3c2f36a86892bd700f471' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471' => $vendorDir . '/composer/autoload_static.php',
@@ -22,7 +24,7 @@ return array(
     'PhotoSearch' => $baseDir . '/views/photo/search/photo_search.class.php',
     'PhotoView' => $baseDir . '/views/photo/photo_view.class.php',
     'Photographers' => $baseDir . '/models/photographers/photographers.class.php',
-    'PhotographersModel' => $baseDir . '/models/photographers/collections_model.class.php',
+    'PhotographersModel' => $baseDir . '/models/photographers/photographers_model.class.php',
     'Photos' => $baseDir . '/models/photos/photos.class.php',
     'UserController' => $baseDir . '/controllers/user_controller.class.php',
     'UserError' => $baseDir . '/views/user/error/error.class.php',
