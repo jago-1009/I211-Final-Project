@@ -17,7 +17,7 @@ class PhotoIndex extends PhotoView {
             <title> <?php echo $page_title ?> </title>
             <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 
-            <link type='text/css' rel='stylesheet' href='<?= IMG_URL ?>/www/css/photogallerystyle.css' />
+<!--            <link type='text/css' rel='stylesheet' href='--><?//= IMG_URL ?><!--/www/css/photogallerystyle.css' />-->
             <script>
                 //create the JavaScript variable for the base url
                 var base_url = "<?= BASE_URL ?>";

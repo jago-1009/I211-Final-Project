@@ -5,7 +5,7 @@
  * File : photodetails.class.php
  * Description:
  */
-class PhotoDetail extends PhotoIndex {
+class PhotoDetail extends PhotoView {
 
     public function display($photo, $confirm = "") {
         //display page header
@@ -20,7 +20,7 @@ class PhotoDetail extends PhotoIndex {
         $creationDate = $photo->getCreationDate();
 
         if (strpos($imgPath, "http://") === false and strpos($imgPath, "https://") === false) {
-            $imgPath = BASE_URL . "/" . PHOTO_IMG . $imgPath;
+            $imgPath = BASE_URL . "/"  . $imgPath;
         }
         ?>
 
@@ -30,7 +30,7 @@ class PhotoDetail extends PhotoIndex {
         <table id="detail">
             <tr>
                 <td style="width: 150px;">
-                    <img src="../../<?= $imgPath ?>" alt="<?= $title ?>" />
+                    <img src="<?= $imgPath ?>" alt="<?= $title ?>" />
                 </td>
                 <td style="width: 130px;">
                     <p><strong>Title:</strong></p>

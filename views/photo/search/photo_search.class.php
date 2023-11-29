@@ -5,7 +5,7 @@
  * File : photo_search.class.php
  * Description:
  */
-class PhotoSearch extends PhotoIndex {
+class PhotoSearch extends PhotoView {
     /*
      * the displays accepts an array of photo objects and displays
      * them in a grid.

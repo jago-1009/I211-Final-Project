@@ -7,6 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
 {
     public static $classMap = array (
+        'CollectionError' => __DIR__ . '/../..' . '/views/collection/error/collectionerror.class.php',
+        'CollectionIndex' => __DIR__ . '/../..' . '/views/collection/index/collectionindex.class.php',
+        'CollectionView' => __DIR__ . '/../..' . '/views/collection/collection_view.class.php',
         'Collections' => __DIR__ . '/../..' . '/models/collections/collections.class.php',
         'CollectionsModel' => __DIR__ . '/../..' . '/models/collections/collections_model.class.php',
         'ComposerAutoloaderInit65a336f8c5b3c2f36a86892bd700f471' => __DIR__ . '/..' . '/composer/autoload_real.php',
@@ -20,10 +23,12 @@ class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
         'PhotoController' => __DIR__ . '/../..' . '/controllers/photo_controller.class.php',
         'PhotoDetail' => __DIR__ . '/../..' . '/views/photo/detail/photodetails.class.php',
         'PhotoError' => __DIR__ . '/../..' . '/views/photo/error/photoerror.class.php',
-        'PhotoIndex' => __DIR__ . '/../..' . '/views/photo/index/photoindex.class.php',
         'PhotoModel' => __DIR__ . '/../..' . '/models/photos/photos_model.class.php',
         'PhotoSearch' => __DIR__ . '/../..' . '/views/photo/search/photo_search.class.php',
         'PhotoView' => __DIR__ . '/../..' . '/views/photo/photo_view.class.php',
+        'PhotographerError' => __DIR__ . '/../..' . '/views/photographer/error/photographererror.class.php',
+        'PhotographerIndex' => __DIR__ . '/../..' . '/views/photographer/index/photographerindex.class.php',
+        'PhotographerView' => __DIR__ . '/../..' . '/views/photographer/photographer_view.class.php',
         'Photographers' => __DIR__ . '/../..' . '/models/photographers/photographers.class.php',
         'PhotographersModel' => __DIR__ . '/../..' . '/models/photographers/photographers_model.class.php',
         'Photos' => __DIR__ . '/../..' . '/models/photos/photos.class.php',
