@@ -21,7 +21,7 @@ class CollectionsModel
     public function getCollections()
     {
         //SQL select statement
-        $sql = "SELECT * FROM " . $this->tblCollections;
+        $sql = "SELECT * FROM " . $this->tblCollections ."WHERE active=1";
 
         //execute the query
         $query = $this->dbConnection->query($sql);

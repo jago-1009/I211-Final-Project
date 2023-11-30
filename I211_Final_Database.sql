@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2023 at 02:10 PM
+-- Generation Time: Nov 30, 2023 at 04:31 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -72,10 +72,10 @@ INSERT INTO `photocollection` (`photoID`, `collectionID`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `photographer`
+-- Table structure for table `photographers`
 --
 
-CREATE TABLE `photographer` (
+CREATE TABLE `photographers` (
   `photographerID` int(11) NOT NULL,
   `firstName` varchar(25) NOT NULL,
   `lastName` varchar(25) NOT NULL,
@@ -84,10 +84,10 @@ CREATE TABLE `photographer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `photographer`
+-- Dumping data for table `photographers`
 --
 
-INSERT INTO `photographer` (`photographerID`, `firstName`, `lastName`, `birthDate`, `email`) VALUES
+INSERT INTO `photographers` (`photographerID`, `firstName`, `lastName`, `birthDate`, `email`) VALUES
 (1, 'Joseph', 'Smith', '2013-11-06', 'joSmith@gmail.com'),
 (2, 'Deorwine', 'Stoyko  ', '1941-02-04', NULL),
 (3, 'Elita', 'Roma', '1994-03-18', 'RomaE@aol.com'),
@@ -106,7 +106,7 @@ CREATE TABLE `photos` (
   `camera` varchar(100) NOT NULL,
   `title` varchar(100) NOT NULL,
   `description` varchar(500) NOT NULL,
-  `imgPath` varchar(20) NOT NULL,
+  `imgPath` varchar(100) NOT NULL,
   `creationDate` date NOT NULL,
   `photographerID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -116,11 +116,30 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`photoID`, `size`, `camera`, `title`, `description`, `imgPath`, `creationDate`, `photographerID`) VALUES
-(1, '3630 pixels x 3746 p', 'Canon EOS R3', 'Night Sky', 'Taken in the beautiful countryside, this photo invokes feelings of calm and tranquility to any fan of nature.', '..\\www\\img\\Night_Sky', '2015-08-19', 1),
-(2, ' 3776 pixels by 5664', 'Canon EOS R3', 'Forest Pond', 'Taken during a mid-day picnic, this photo deeply reminds the viewer of the throes of childhood in Vienna.', '..\\www\\img\\Forest_Po', '2006-07-24', 3),
-(3, '5461 pixels by 6512 ', 'Nikon D850', 'Village Of Light', 'The photographer behind this photo experienced every part of their life in this town. Birth, marriage, retirement. When asked about the town itself, Ghassan responded with \"The town? It\'s home to me.\"', '..\\www\\img\\Village.j', '1996-06-17', 5),
-(4, 'Lorem ipsum dolor si', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', '..\\www\\img\\Italian_S', '2023-11-02', 2),
-(5, 'Lorem ipsum dolor si', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', '..\\www\\img\\Wheat_Pla', '2023-11-02', 5);
+(1, '3630 pixels x 3746 p', 'Canon EOS R3', 'Night Sky', 'Taken in the beautiful countryside, this photo invokes feelings of calm and tranquility to any fan of nature.', '.\\www\\img\\Night_Sky.jpeg', '2015-08-19', 1),
+(2, ' 3776 pixels by 5664', 'Canon EOS R3', 'Forest Pond', 'Taken during a mid-day picnic, this photo deeply reminds the viewer of the throes of childhood in Vienna.', '.\\www\\img\\Forest_Pond.jpeg', '2006-07-24', 3),
+(3, '5461 pixels by 6512 ', 'Nikon D850', 'Village Of Light', 'The photographer behind this photo experienced every part of their life in this town. Birth, marriage, retirement. When asked about the town itself, Ghassan responded with \"The town? It\'s home to me.\"', '.\\www\\img\\Village.jpeg', '1996-06-17', 5),
+(4, 'Lorem ipsum dolor si', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', '.\\www\\img\\Italian_Seaside.jpeg', '2023-11-02', 2),
+(5, 'Lorem ipsum dolor si', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', '.\\www\\img\\Wheat_Plains.jpeg', '2023-11-02', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `userID` int(11) NOT NULL,
+  `userName` varchar(20) NOT NULL,
+  `userPassword` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userID`, `userName`, `userPassword`) VALUES
+(1, 'phpuser', 'phpuser');
 
 --
 -- Indexes for dumped tables
@@ -140,9 +159,9 @@ ALTER TABLE `photocollection`
   ADD KEY `collectionID` (`collectionID`);
 
 --
--- Indexes for table `photographer`
+-- Indexes for table `photographers`
 --
-ALTER TABLE `photographer`
+ALTER TABLE `photographers`
   ADD PRIMARY KEY (`photographerID`);
 
 --
@@ -151,6 +170,12 @@ ALTER TABLE `photographer`
 ALTER TABLE `photos`
   ADD PRIMARY KEY (`photoID`),
   ADD KEY `photographer` (`photographerID`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`userID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -163,9 +188,9 @@ ALTER TABLE `collections`
   MODIFY `collectionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `photographer`
+-- AUTO_INCREMENT for table `photographers`
 --
-ALTER TABLE `photographer`
+ALTER TABLE `photographers`
   MODIFY `photographerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
@@ -173,6 +198,12 @@ ALTER TABLE `photographer`
 --
 ALTER TABLE `photos`
   MODIFY `photoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -189,7 +220,7 @@ ALTER TABLE `photocollection`
 -- Constraints for table `photos`
 --
 ALTER TABLE `photos`
-  ADD CONSTRAINT `photographer` FOREIGN KEY (`photographerID`) REFERENCES `photographer` (`photographerID`);
+  ADD CONSTRAINT `photographer` FOREIGN KEY (`photographerID`) REFERENCES `photographers` (`photographerID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
