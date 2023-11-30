@@ -26,7 +26,6 @@ static public function displayheader($page_title) {
         <div class="home">
             <a href="<?= BASE_URL ?>/index">Home</a>
         </div>
-        <i class="fa-solid fa-magnifying-glass"></i>
         <input class="search-bar" type="text" placeholder="Search for Photos">
         <div class="links">
             <a href="<?= BASE_URL ?>/photo/index">Our Photos</a>
@@ -51,7 +50,7 @@ static public function displayfooter(){
     <div class="footer">
         <p>&copy 2023 Photography Website</p>
     </div>
-    
+    <script src="../www/js/ajax_autosuggestion.js"></script>
 <?php
 }
 

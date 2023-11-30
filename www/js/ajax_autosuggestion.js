@@ -3,7 +3,7 @@
  */
 var xmlHttp;
 var numTitles = 0;  //total number of suggested movies titles
-var activeTitle = -1;  //movie title currently being selected
+var activeTitle = -1;  //photo title currently being selected
 var searchBoxObj, suggestionBoxObj;
 
 //this function creates a XMLHttpRequest object. It should work with most types of browsers.
