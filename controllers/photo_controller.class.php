@@ -8,18 +8,36 @@
  *
  */
 
-class PhotoController {
+class PhotoController
+{
 
     private $photo_model;
 
     //constructor
-    public function __construct() {
+    public function __construct()
+    {
         // PhotoModel class
         $this->photo_model = new PhotoModel();
     }
+    public function suggest($terms) {
+        //retrieve query terms
+        $query_terms = urldecode(trim($terms));
+        $movies = $this->photo_model->search_photo($query_terms);
+
+        //retrieve all movie titles and store them in an array
+        $titles = array();
+        if ($movies) {
+            foreach ($movies as $movie) {
+                $titles[] = $movie->getTitle();
+            }
+        }
+
+        echo json_encode($titles);
+    }
 
     //  displays all photos
-    public function index() {
+    public function index()
+    {
         // photos and store them in an array
         $photos = $this->photo_model->getPhotos();
 
@@ -36,7 +54,8 @@ class PhotoController {
     }
 
     //  photograph product
-    public function detail($id) {
+    public function detail($id)
+    {
         //  photograph
         $photos = $this->photo_model->view_photo($id);
 
@@ -52,34 +71,19 @@ class PhotoController {
         $view->display($photos);
     }
 
-    // Search photos
-    public function search() {
-        // query terms  search form
-        $query_terms = trim($_GET['query-terms']);
+    // Search the database for photos that match words in titles
+    public function search()
+    {
+
+        $terms = trim($_GET['query-terms']);
 
         // If search empty list all photos
-        if ($query_terms == "") {
+        if ($terms == "") {
             $this->index();
         }
 
-        // Search the database
-        $photos = $this->search_photo($query_terms);
+        $photos = $this->photo_model->search_photo($terms);
 
-        if ($photos === false) {
-            //  error
-            $message = "An error has occurred.";
-            $this->error($message);
-            return;
-        }
-
-        //  matched photos
-        $search = new PhotoSearch();
-        $search->display($query_terms, $photos);
-    }
-
-    // Search the database for photos that match words in titles
-    public function search_photo($terms) {
-      $photos = $this->photo_model->search_photo($terms);
         if (!$photos) {
             // error
             $message = "There was a problem displaying the terms='" . $terms . "'.";
@@ -94,7 +98,8 @@ class PhotoController {
     }
 
     //  error
-    public function error($message) {
+    public function error($message)
+    {
         //  Error class
         $error = new PhotoError();
 
@@ -103,7 +108,8 @@ class PhotoController {
     }
 
     // Handle
-    public function __call($name, $arguments) {
+    public function __call($name, $arguments)
+    {
         $message = "Calling method '$name' caused errors. Route does not exist.";
         $this->error($message);
         return;

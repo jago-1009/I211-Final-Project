@@ -21,7 +21,12 @@ static public function displayheader($page_title) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link type='text/css' rel='stylesheet' href='../www/styles/styles.css' />
+    <script>
+        var base_url = "<?=BASE_URL?>";
+    </script>
     <title>Document</title>
+</head>
+    <body>
     <div class="nav">
         <div class="home">
             <a href="<?= BASE_URL ?>/index">Home</a>
@@ -36,11 +41,10 @@ static public function displayheader($page_title) {
             <a href="">Log In</a>
         </div>
     </div>
-</head>
-<body>
 
-</body>
-</html>
+
+
+
 <?php
 }
 
@@ -49,7 +53,9 @@ static public function displayfooter(){
     <div class="footer">
         <p>&copy 2023 Photography Website</p>
     </div>
-    <script src="../www/js/ajax_autosuggestion.js"></script>
+
+    </body>
+    </html>
 <?php
 }
 

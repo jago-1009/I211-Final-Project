@@ -6,6 +6,7 @@ var numTitles = 0;  //total number of suggested movies titles
 var activeTitle = -1;  //photo title currently being selected
 var searchBoxObj, suggestionBoxObj;
 
+
 //this function creates a XMLHttpRequest object. It should work with most types of browsers.
 function createXmlHttpRequestObject() {
     // create a XMLHttpRequest object compatible to most browsers
@@ -43,7 +44,7 @@ function suggest(query) {
 
     //proceed only if the search term isn't empty
     // open an asynchronous request to the server.
-    xmlHttp.open("GET", base_url + "/" + media + "/suggest/" + query, true);
+    xmlHttp.open("GET", base_url + "/" + "photo" + "/suggest/" + query, true);
 
     //handle server's responses
     xmlHttp.onreadystatechange = function () {

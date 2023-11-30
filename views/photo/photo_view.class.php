@@ -15,7 +15,7 @@ class PhotoView extends View {
             <input type="text" name="query-terms" id="searchtextbox" placeholder="Search Photos by title" autocomplete="off" onkeyup="handleKeyUp(event)">
             <input type="submit" value="Go" />
         </form>
-
+        <div id="suggestionDiv"></div>
         <div class="head">
             <p class="header">Photographs</p>
         </div>
@@ -40,6 +40,7 @@ class PhotoView extends View {
             }
             ?>
         </div>
+        <script src="<?=BASE_URL?>/www/js/ajax_autosuggestion.js"></script>
         <?php
         parent::displayfooter();
     }

@@ -53,6 +53,7 @@ class PhotoModel
     //search the database for photos that match words in titles. Return an array of photos if successful; false otherwise.
     public function search_photo($terms) {
         $terms = explode(" ", $terms); //explode multiple terms into an array
+
         //select statement for AND search
         $sql = "SELECT * FROM " . $this->tblPhotos .
             " WHERE 1";
@@ -61,9 +62,8 @@ class PhotoModel
             $sql .= " AND title LIKE '%" . $term . "%'";
         }
         foreach ($terms as $term) {
-            $sql .= " AND description LIKE '%" . $term . "%'";
+            $sql .= " OR description LIKE '%" . $term . "%'";
         }
-
 
 
         //execute the query
@@ -87,7 +87,7 @@ class PhotoModel
             // $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
             $photo = new Photos($obj->photoID,$obj->size,$obj->camera, $obj->title, $obj->description,$obj->creationDate,$obj->imgPath);
             //add the photo into the array
-            $photos[] += $photo;
+            $photos[] = $photo;
         }
 
         return $photos;

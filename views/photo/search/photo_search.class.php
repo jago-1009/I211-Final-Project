@@ -12,7 +12,7 @@ class PhotoSearch extends PhotoView {
 
         parent::displayHeader("Search Results");
         ?>
-        <div id="main-header"> Search Results for <i><?= $photos ?></i></div>
+        <div id="main-header"> Search Results:</i></div>
         <span class="rcd-numbers">
             <?php
             echo ((!is_array($photos)) ? "( 0 - 0 )" : "( 1 - " . count($photos) . " )");
@@ -35,11 +35,9 @@ class PhotoSearch extends PhotoView {
                     $description = $photo->getDescription();
                     $title = $photo->getTitle();
 
-                    if (strpos($imgPath, "http://") === false and strpos($imgPath, "https://") === false) {
-                        $image = IMG_URL . PHOTO_IMG . $imgPath;
-                    }
 
-                    echo "<div class='item'><p><a href='" . BASE_URL . "/photo/detail/$id'><img src='$image'></a><span>$name<br>Description: $description<br>" . " Author: $author<br>". " Price: $price<br>"."</span></p></div>";
+
+                    echo "<div class='item'><p><a href='" . BASE_URL . "/photo/detail/$id'><img src='../$imgPath'></a><span>$title<br>Description: $description<br>" . "<br>"."</span></p></div>";
 
                 }
             }
