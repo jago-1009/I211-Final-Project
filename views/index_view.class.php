@@ -51,6 +51,7 @@ static public function displayfooter(){
     <div class="footer">
         <p>&copy 2023 Photography Website</p>
     </div>
+    
 <?php
 }
 
