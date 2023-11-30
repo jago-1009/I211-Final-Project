@@ -34,7 +34,7 @@ class PhotographerController {
 
     // Show details of a photographer
     public function detail($id) {
-        // specific photographer
+        //photographer
         $photographer = $this->photographer_model->viewPhotographer($id);
 
         if (!$photographer) {
@@ -51,7 +51,7 @@ class PhotographerController {
 
     // Search photographers
     public function search() {
-        // Retrieve query terms from search form
+        //  search form
         $query_terms = trim($_GET['query-terms']);
 
         //  search term is empty then all
@@ -59,7 +59,7 @@ class PhotographerController {
             $this->index();
         }
 
-        // Search the database
+
         $photographers = $this->photographer_model->searchPhotographer($query_terms);
 
         if ($photographers === false) {
@@ -69,17 +69,17 @@ class PhotographerController {
             return;
         }
 
-        // Display matched photographers
+        //  matched photographers
         $search = new PhotographerSearch();
         $search->display($query_terms, $photographers);
     }
 
-    // Handle an error
+    // Handle  error
     public function error($message) {
         //  Error class
         $error = new PhotographerError();
 
-        // Display the error page
+        // error page
         $error->display($message);
     }
 

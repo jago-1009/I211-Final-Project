@@ -61,7 +61,7 @@ class UserController {
 
     public function UserRegisterVerify() {
 
-        // addUser method of the UserModel object
+        // addUser method
         $result = $this->user_model->add_user();
         if (!$result) {
             //handle errors
@@ -70,7 +70,7 @@ class UserController {
             return;
         }
 
-        // account creation was successful.
+        // creation was successful.
         $success = "Welcome to Photo store. We welcome you";
 
         $view = new UserRegisterVerify();

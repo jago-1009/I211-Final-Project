@@ -50,10 +50,10 @@ class CollectionsController {
 
     // Search collections
     public function search() {
-        // query terms from search
+        // search
         $query_terms = trim($_GET['query-terms']);
 
-        //  list all collections
+        //   collections
         if ($query_terms == "") {
             $this->index();
         }
