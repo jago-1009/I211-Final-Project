@@ -5,7 +5,7 @@
  * File : photodetails.class.php
  * Description:
  */
-class PhotoDetails {
+class PhotoDetails  extends PhotoView{
 
     public function display($photo, $confirm = "") {
         //display page header

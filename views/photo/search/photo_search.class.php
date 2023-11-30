@@ -5,7 +5,7 @@
  * File : photo_search.class.php
  * Description:
  */
-class PhotoSearch  {
+class PhotoSearch extends PhotoView {
 
     public function display($photos) {
         //display page header

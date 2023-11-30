@@ -5,7 +5,7 @@
  * File : photoerror.class.php
  * Description:
  */
-class PhotoError {
+class PhotoError  {
 
     public function display($message) {
 
@@ -22,4 +22,3 @@ class PhotoError {
     }
 
 }
-

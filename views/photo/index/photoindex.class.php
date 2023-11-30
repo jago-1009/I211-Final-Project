@@ -5,7 +5,7 @@
  * File : photoindex.class.php
  * Description:
  */
-class PhotoIndex{
+class PhotoIndex extends PhotoView {
 //this method displays the page header
     static public function displayHeader($page_title) {
 
