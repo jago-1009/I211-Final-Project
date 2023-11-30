@@ -12,7 +12,7 @@ class PhotographerController {
 
     public function __construct() {
         //  PhotographerModel class
-        $this->photographer_model = new PhotographerModel();
+        $this->photographer_model = new PhotographersModel();
     }
 
     //  displays all photographers

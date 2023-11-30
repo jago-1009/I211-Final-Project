@@ -7,7 +7,7 @@
  */
 class CollectionsController {
 
-    private CollectionsModel $collections_model;
+    private $collections_model;
 
     public function __construct() {
         // CollectionsModel class

@@ -28,15 +28,15 @@ class PhotoSearch extends PhotoView {
             } else {
                 //display photos in a grid;
                 foreach ($photos as $photo) {
-                    $id = $photo->getId();
-                    $name = $photo->getName();
+                    $id = $photo->getPhotoId();
+                    $imgPath = $photo->getImgPath();
+                    $size = $photo->getSize();
+                    $camera = $photo->getCamera();
                     $description = $photo->getDescription();
-                    $author = $photo->getAuthor();
-                    $price = $photo->getPrice();
-                    $image = $photo->getImage();
+                    $title = $photo->getTitle();
 
-                    if (strpos($image, "http://") === false and strpos($image, "https://") === false) {
-                        $image = IMG_URL . PHOTO_IMG . $image;
+                    if (strpos($imgPath, "http://") === false and strpos($imgPath, "https://") === false) {
+                        $image = IMG_URL . PHOTO_IMG . $imgPath;
                     }
 
                     echo "<div class='item'><p><a href='" . BASE_URL . "/photo/detail/$id'><img src='$image'></a><span>$name<br>Description: $description<br>" . " Author: $author<br>". " Price: $price<br>"."</span></p></div>";

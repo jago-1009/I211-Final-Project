@@ -23,39 +23,39 @@ class PhotoDetails  extends PhotoView{
             $imgPath = BASE_URL . "/"  . $imgPath;
         }
         ?>
+        <!DOCTYPE html>
+        <html>
+    <head>
 
+        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+        <link type='text/css' rel='stylesheet' href='../../www/styles/styles.css' />
         <div id="main-header">Photo Details</div>
         <hr>
         <!-- display product details in a table -->
+        <div class="detailHolder">
         <table id="detail">
-            <tr>
-                <td style="width: 150px;">
-                    <img src="<?= $imgPath ?>" alt="<?= $title ?>" />
+            <tr class="info">
+                <td>
+                    <img src="<?= $imgPath ?>" alt="<?= $title ?>" class="detailImg" />
                 </td>
-                <td style="width: 130px;">
-                    <p><strong>Title:</strong></p>
-                    <p><strong>Description:</strong></p>
-                    <p><strong>Size:</strong></p>
-                    <p><strong>Camera:</strong></p>
-                    <p><strong>Creation Date:</strong></p>
-                    <p><strong>ID:</strong></p>
+                <td class="infoText">
+                    <p><strong>Title:</strong><?= $title ?></p>
+                    <p><strong>Description:</strong><?= $description ?></p>
+                    <p><strong>Size:</strong><?= $size ?></p>
+                    <p><strong>Camera:</strong><?= $camera ?></p>
+                    <p><strong>Creation Date:</strong><?= $creationDate ?></p>
+                    <p><strong>ID:</strong><?= $id ?></p>
                     <div id="button-group">
                         <input type="button" id="edit-button" value="   Edit   "
                                onclick="window.location.href = '<?= BASE_URL ?>/photo/edit/<?= $id ?>'">&nbsp;
                     </div>
+                    <a href="<?= BASE_URL ?>/photo/index">Go to photo list</a>
+
                 </td>
-                <td>
-                    <p><?= $title ?></p>
-                    <p><?= $description ?></p>
-                    <p><?= $size ?></p>
-                    <p><?= $camera ?></p>
-                    <p><?= $creationDate ?></p>
-                    <p><?= $id ?></p>
-                    <div id="confirm-message"><?= $confirm ?></div>
-                </td>
+
             </tr>
         </table>
-        <a href="<?= BASE_URL ?>/photo/index">Go to photo list</a>
+        </div>
 
         <?php
         //display page footer

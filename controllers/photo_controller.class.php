@@ -48,7 +48,7 @@ class PhotoController {
         }
 
         //  photo details
-        $view = new PhotoDetail();
+        $view = new PhotoDetails();
         $view->display($photos);
     }
 
