@@ -31,7 +31,7 @@ class CollectionsController {
         $view->display($collections);
     }
 
-    // details of a collection
+    // details collection
     public function detail($id) {
         // Retrieve the specific collection
         $collection = $this->collections_model->viewCollection($id);
@@ -43,7 +43,7 @@ class CollectionsController {
             return;
         }
 
-        // Display collection
+        //  collection
         $view = new CollectionDetail();
         $view->display($collection);
     }

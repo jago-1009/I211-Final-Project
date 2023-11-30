@@ -11,28 +11,28 @@ class PhotographerController {
     private $photographer_model;
 
     public function __construct() {
-        //  PhotographerModel class
+        //  PhotographerModel
         $this->photographer_model = new PhotographersModel();
     }
 
-    //  displays all photographers
+    //   all photographers
     public function index() {
-        //  photographers  them in an array
+        //  in an array
         $photographers = $this->photographer_model->getPhotographers();
 
         if (!$photographers) {
-            // Display an error
+            //  error
             $message = "There was a problem displaying the photographers.";
             $this->error($message);
             return;
         }
 
-        // Display all photographers
+        // all photographers
         $view = new PhotographerView();
         $view->display($photographers);
     }
 
-    // Show details of a photographer
+    //  photographer
     public function detail($id) {
         //photographer
         $photographer = $this->photographer_model->viewPhotographer($id);
@@ -44,7 +44,7 @@ class PhotographerController {
             return;
         }
 
-        // Display photographer details
+        //photographer details
         $view = new PhotographerDetail();
         $view->display($photographer);
     }
@@ -54,7 +54,7 @@ class PhotographerController {
         //  search form
         $query_terms = trim($_GET['query-terms']);
 
-        //  search term is empty then all
+        //  search term is empty
         if ($query_terms == "") {
             $this->index();
         }
