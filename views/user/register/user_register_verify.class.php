@@ -16,7 +16,7 @@ class UserRegisterVerify extends IndexView {
             ?>
             <div id="main-header">
             <p>Your account has been created.</p>
-            <span style="float: left">Ready for your amazing banking experience? <a href="<?= BASE_URL ?>/user/login">Login</a></span>
+            <span style="float: left">Ready for your amazing Art experience? <a href="<?= BASE_URL ?>/user/login">Login</a></span>
             <?php
             //if account creation was unsuccessful display the corresponding message and links
         } else {

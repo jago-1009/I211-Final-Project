@@ -23,7 +23,7 @@ class Verify extends IndexView {
         <div id="main-header">
         <p>You have successfully logged in.</p>
         <?php
-        //hide features from users who are not logged in as admin
+        //hide features from users
         if ($_COOKIE['role'] == 2) {
             ?>
             <a href="<?= BASE_URL ?>/admin/index" class="btn btn-info" role="button">Dashboard</a>

@@ -5,18 +5,14 @@
  * File : photo_search.class.php
  * Description:
  */
-class PhotoSearch extends PhotoView {
-    /*
-     * the displays accepts an array of photo objects and displays
-     * them in a grid.
-     */
+class PhotoSearch  {
 
-    public function display($terms, $photos) {
+    public function display($photos) {
         //display page header
 
         parent::displayHeader("Search Results");
         ?>
-        <div id="main-header"> Search Results for <i><?= $terms ?></i></div>
+        <div id="main-header"> Search Results for <i><?= $photos ?></i></div>
         <span class="rcd-numbers">
             <?php
             echo ((!is_array($photos)) ? "( 0 - 0 )" : "( 1 - " . count($photos) . " )");

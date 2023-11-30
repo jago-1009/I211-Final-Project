@@ -7,7 +7,7 @@ File Name: photo_view.class.php
 Description:
  */
 
-class PhotoView extends View {
+class PhotoView {
     public function display($photos){
         parent::displayheader("Photo Library");
         ?>
