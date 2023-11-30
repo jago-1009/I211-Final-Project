@@ -7,7 +7,7 @@
  */
 $page_title = "Error";
 //display header
-IndexView::displayHeader($page_title);
+View::displayHeader($page_title);
 
 ?>
     <div id = "main-header">Error</div>
@@ -32,4 +32,4 @@ IndexView::displayHeader($page_title);
 
 <?php
 //display footer
-IndexView::displayFooter();
+View::displayFooter();

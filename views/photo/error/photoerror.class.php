@@ -5,7 +5,7 @@
  * File : photoerror.class.php
  * Description:
  */
-class PhotoError  {
+class PhotoError extends View {
 
     public function display($message) {
 

@@ -79,45 +79,18 @@ class PhotoController {
 
     // Search the database for photos that match words in titles
     public function search_photo($terms) {
-        $terms = explode(" ", $terms); //  array
-
-        $tblPhotos = "web_gallery";
-
-        //  AND search
-        $sql = "SELECT * FROM $tblPhotos WHERE 1";
-
-        foreach ($terms as $term) {
-            $sql .= " AND title LIKE '%$term%'";
+      $photos = $this->photo_model->search_photo($terms);
+        if (!$photos) {
+            // error
+            $message = "There was a problem displaying the terms='" . $terms . "'.";
+            $this->error($message);
+            return;
         }
 
-        //  query
-        $query = $this->dbConnection->query($sql);
+        //  photo details
+        $view = new PhotoSearch();
+        $view->display($photos);
 
-        //search failed
-        if (!$query) {
-            throw new DataMissingException("Database exclusion failed.");
-        }
-
-        //  no photo
-        if ($query->num_rows == 0) {
-            return 0;
-        }
-
-
-        //store all
-        $photos = array();
-
-        // Loop rows
-        while ($obj = $query->fetch_object()) {
-            $photo = new Photo($obj->title, $obj->description, $obj->author, $obj->img);
-
-            // Set the id
-            $photo->setId($obj->id);
-
-            // into the array
-            $photos[] = $photo;
-        }
-        return $photos;
     }
 
     //  error

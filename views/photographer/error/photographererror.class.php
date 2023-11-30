@@ -6,7 +6,7 @@
  * Description:
  */
 
-class PhotographerError {
+class PhotographerError extends View {
 
     public function display($message) {
 

@@ -11,6 +11,10 @@ class PhotoView extends View {
     public function display($photos){
         parent::displayheader("Photo Library");
         ?>
+        <form method="get" action="<?= BASE_URL ?>/photo/search">
+            <input type="text" name="query-terms" id="searchtextbox" placeholder="Search Photos by title" autocomplete="off" onkeyup="handleKeyUp(event)">
+            <input type="submit" value="Go" />
+        </form>
 
         <div class="head">
             <p class="header">Photographs</p>
