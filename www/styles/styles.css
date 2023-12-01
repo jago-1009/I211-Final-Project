@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: "Microsoft Sans Serif";
-    background-color: #f7f7f7;
 }
 
 .nav{
@@ -21,6 +20,7 @@
 .home a{
     text-decoration: none;
     color: black;
+
 }
 
 .home a:hover{
@@ -32,7 +32,7 @@
 }
 
 .links{
-    width: 400px;
+    width: 500px;
     display: flex;
     justify-content: space-between;
     padding-right: 100px;
@@ -41,6 +41,7 @@
 .links a{
     text-decoration: none;
     color: black;
+
 }
 
 .header {
@@ -57,7 +58,43 @@
     justify-content: center;
     align-items: center;
     height: 70px;
-    margin-top: 30px;
+    color: black;
+}
+
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/Forest_Pond.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1{
+    color: #fff;
+    font-size: 80px;
+}
+
+.hero a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+}
+
+.hero a:hover{
+    text-decoration: underline solid white 3px;
+    text-underline-offset: 5px;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero p{
+    margin-top: 20px;
 }
 
 .container{
@@ -70,7 +107,7 @@
 
 .photo-list {
     width: 310px;
-display: flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -138,3 +175,15 @@ display: flex;
     position: relative;
     left:500px;
 }
+
+.img-search img{
+    height: 300px;
+    width: 300px;
+}
+
+.search-back a{
+    font-size: 24px;
+    text-decoration: none;
+    color: black
+}
+

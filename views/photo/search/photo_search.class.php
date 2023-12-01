@@ -1,21 +1,25 @@
 <?php
+
 /**
  * Name : Deep Patel
  * Date : 11/21/23
  * File : photo_search.class.php
  * Description:
  */
-class PhotoSearch extends PhotoView {
+class PhotoSearch extends PhotoView
+{
 
-    public function display($photos) {
+    public function display($photos)
+    {
         //display page header
 
         parent::displayHeader("Search Results");
         ?>
+        <h4 class="search-back"><a href="<?= BASE_URL ?>/photo/index">< Back to Photo Gallery List</a></h4>
         <div id="main-header"> Search Results:</i></div>
         <span class="rcd-numbers">
             <?php
-            echo ((!is_array($photos)) ? "( 0 - 0 )" : "( 1 - " . count($photos) . " )");
+            echo((!is_array($photos)) ? "( 0 - 0 )" : "( 1 - " . count($photos) . " )");
             ?>
         </span>
         <hr>
@@ -36,14 +40,14 @@ class PhotoSearch extends PhotoView {
                     $title = $photo->getTitle();
 
 
-
-                    echo "<div class='item'><p><a href='" . BASE_URL . "/photo/detail/$id'><img src='../$imgPath'></a><span>$title<br>Description: $description<br>" . "<br>"."</span></p></div>";
+                    echo "<div class='photo-list'>
+                    <div class='img-search'><a href='" . BASE_URL . "/photo/detail/$id'><img src='../$imgPath'></a><div class='photo-list-details'><h1>$title</h1><p>$description</p></div>
+                    </div>";
 
                 }
             }
             ?>
         </div>
-        <a href="<?= BASE_URL ?>/photo/index">Go to photo gallery list</a>
         <?php
         //display page footer
         parent::displayFooter();

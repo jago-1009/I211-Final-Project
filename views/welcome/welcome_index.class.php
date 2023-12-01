@@ -14,7 +14,13 @@ class WelcomeIndex extends View {
         ?>
         <link type='text/css' rel='stylesheet' href='./www/styles/styles.css' />
 
-        <div>Welcome to Photo Gallery!</div>
+        <div class="hero">
+            <div class="hero-text">
+            <h1>Welcome to Photo Gallery!</h1>
+            <p><a href="<?= BASE_URL ?>/photo/index">Start Browsing</a></p>
+            </div>
+        </div>
+
         <?php
         //display page footer
         parent::displayFooter();
