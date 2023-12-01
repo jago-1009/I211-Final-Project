@@ -43,7 +43,7 @@ class PhotoIndex extends PhotoView {
         <div id="searchbar">
             <form method="get" action="<?= BASE_URL ?>/photo/search">
                 <input type="text" name="query-terms" id="searchtextbox" placeholder="Search photos by title" autocomplete="off" onkeyup="handleKeyUp(event)">
-                <input type="submit" value="Go" />
+                <input type="submit" class="gobutton" value="Go" />
             </form>
             <div id="suggestionDiv"></div>
         </div>

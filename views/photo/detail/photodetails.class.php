@@ -29,8 +29,8 @@ class PhotoDetails  extends PhotoView{
 
         <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
         <link type='text/css' rel='stylesheet' href='../../www/styles/styles.css' />
-        <div id="main-header">Photo Details</div>
-        <hr>
+        <h4 class="search-back"><a href="<?= BASE_URL ?>/photo/index">< Back to Photo Gallery List</a></h4>
+        <div class="details-title"><h1><?= $title?></h1></div>
         <!-- display product details in a table -->
         <div class="detailHolder">
         <table id="detail">
@@ -39,17 +39,15 @@ class PhotoDetails  extends PhotoView{
                     <img src="<?= $imgPath ?>" alt="<?= $title ?>" class="detailImg" />
                 </td>
                 <td class="infoText">
-                    <p><strong>Title:</strong><?= $title ?></p>
-                    <p><strong>Description:</strong><?= $description ?></p>
-                    <p><strong>Size:</strong><?= $size ?></p>
-                    <p><strong>Camera:</strong><?= $camera ?></p>
-                    <p><strong>Creation Date:</strong><?= $creationDate ?></p>
-                    <p><strong>ID:</strong><?= $id ?></p>
+                    <h3><?= $description ?></h3>
+                    <p><strong>Size: </strong><?= $size ?></p>
+                    <p><strong>Camera: </strong><?= $camera ?></p>
+                    <p><strong>Creation Date: </strong><?= $creationDate ?></p>
+                    <p><strong>ID: </strong><?= $id ?></p>
                     <div id="button-group">
                         <input type="button" id="edit-button" value="   Edit   "
                                onclick="window.location.href = '<?= BASE_URL ?>/photo/edit/<?= $id ?>'">&nbsp;
                     </div>
-                    <a href="<?= BASE_URL ?>/photo/index">Go to photo list</a>
 
                 </td>
 
