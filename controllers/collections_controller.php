@@ -5,7 +5,7 @@
  * File : collections_controller.php
  * Description:
  */
-class CollectionsController {
+class CollectionController {
 
     private $collections_model;
 

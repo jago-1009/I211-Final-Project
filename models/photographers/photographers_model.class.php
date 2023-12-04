@@ -10,6 +10,7 @@ class PhotographersModel
 {
     private $db; //database object
     private $dbConnection; //database connection object
+    private $tblPhotographers; //Database table
 
     public function __construct()
     {
@@ -18,8 +19,8 @@ class PhotographersModel
         $this->tblPhotographers = $this->db->getPhotographerTable();
     }
 
-    //this method retrieves all photos from the database and
-    // returns an array of photos objects if successful or false if failed.
+    //this method retrieves all photographers from the database and
+    // returns an array of photographers objects if successful or false if failed.
 
     public function getPhotographers()
     {
@@ -49,7 +50,7 @@ class PhotographersModel
         return false;
     }
 
-//search the database for photos that match words in titles. Return an array of photos if successful; false otherwise.
+//search the database for photographers that match words in titles. Return an array of photographers if successful; false otherwise.
     public function search_photographer($terms)
     {
         $terms = explode(" ", $terms); //explode multiple terms into an array
@@ -58,10 +59,10 @@ class PhotographersModel
             " WHERE 1";
 
         foreach ($terms as $term) {
-            $sql .= " AND title LIKE '%" . $term . "%'";
+            $sql .= " AND firstName LIKE '%" . $term . "%'";
         }
         foreach ($terms as $term) {
-            $sql .= " AND description LIKE '%" . $term . "%'";
+            $sql .= " AND lastName LIKE '%" . $term . "%'";
         }
 
 
@@ -78,25 +79,25 @@ class PhotographersModel
             return 0;
 
         //search succeeded, and found at least 1 photo found.
-        //create an array to store all the returned photos
-        $photos = array();
+        //create an array to store all the returned photographers
+        $photographers = array();
 
         //loop through all rows in the returned recordsets
         while ($obj = $query->fetch_object()) {
-            // $photoId,$size,$camera, $title, $description, $creationDate, $imgPath;
-            $photo = new Photo($obj->photoID, $obj->size, $obj->camera, $obj->title, $obj->description, $obj->creationDate, $obj->imgPath);
+
+            $photographer = new Photographers($obj->photographerID, $obj->firstName, $obj->lastName, $obj->birthDate, $obj->email);
             //add the photo into the array
-            $photos[] += $photo;
+            $photographers[] += $photographer;
         }
 
-        return $photos;
+        return $photographers;
     }
-    public function view_photographer($id)
+    public function viewPhotographer($id)
     {
         //the select sql statement
 
-        $sql = "SELECT * FROM " . $this->tblPhotos ."," .$this->tblPhotographers.
-            " WHERE " . $this->tblPhotos . ".photographerID =" . $this->tblPhotographers . ".photographerID" .
+        $sql = "SELECT * FROM " .$this->tblPhotographers.
+            " WHERE ". $this->tblPhotographers . ".photographerID" .
             "";
 
         $query = $this->dbConnection->query($sql);
@@ -108,18 +109,15 @@ class PhotographersModel
         if ($query && $query->num_rows > 0) {
             $obj = $query->fetch_object();
 
-            //create a photo object
-            $photographer = new Photographers(null, $obj->product_name, $obj->description, $obj->author, $obj->img);
+            //create a photographer object
+            $photographer = new Photographers($obj->photographerID, $obj->firstName, $obj->lastName, $obj->birthDate, $obj->email);
 
-            //set the id for the product
-            $photographer->setId($obj->photographer_id);
-
-            //create a photo object
 
 
 
 
             return $photographer;
+
         }
 
 

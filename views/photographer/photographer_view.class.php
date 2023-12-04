@@ -27,8 +27,8 @@ class PhotographerView extends View {
                     $birthdate = $photographers->getBirthDate();
                     $email = $photographers->getEmail();
 
-                    echo "<div class='photo-list'>
-                        <div class='photo-list-details'><h1>$firstname $lastname</h1><h4>$birthdate</h4><h4>$email</h4><p>ID: $photographerID</p></div>
+                    echo "<div class='photographer-list'>
+                        <div class='photographer-list-details'><h1>$firstname $lastname</h1><h4>$birthdate</h4><h4>$email</h4><p>ID: $photographerID</p></div>
                     </div>";
                 }
             }

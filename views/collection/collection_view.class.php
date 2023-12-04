@@ -20,11 +20,11 @@ class CollectionView extends View {
             if($collections === 0){
                 echo "No photo was found.";
             } else {
-                foreach ($collections as $collections){
-                    $collectionID = $collections->getCollectionID();
-                    $title = $collections->getTitle();
-                    $description = $collections->getDescription();
-                    $active = $collections->getActive();
+                foreach ($collections as $collection){
+                    $collectionID = $collection->getCollectionID();
+                    $title = $collection->getTitle();
+                    $description = $collection->getDescription();
+                    $active = $collection->getActive();
 
                     echo "<div class='photo-list'>
                         <div class='photo-list-details'><h1>$title</h1><h4>$description</h4><h4>$active</h4><p>ID: $collectionID</p></div>

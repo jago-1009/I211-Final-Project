@@ -11,6 +11,8 @@ class PhotoModel
 {
     private $db; //database object
     private $dbConnection; //database connection object
+    private $tblPhotos;//Database Table
+    private $tblPhotographers; //Database Table
 
     public function __construct() {
         $this->db = Database::getInstance();

@@ -42,6 +42,7 @@ class PhotoSearch extends PhotoView
 
                     echo "<div class='photo-list'>
                     <div class='img-search'><a href='" . BASE_URL . "/photo/detail/$id'><img src='../$imgPath'></a><div class='photo-list-details'><h1>$title</h1><p>$description</p></div>
+                    </div>
                     </div>";
 
                 }

@@ -2,7 +2,7 @@
 /**
  * Name : Deep Patel
  * Date : 11/21/23
- * File : photodetails.class.php
+ * File : photographerdetails.php
  * Description:
  */
 class PhotoDetails  extends PhotoView{

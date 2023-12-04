@@ -42,7 +42,7 @@ class PhotographerIndex extends PhotographerView {
 
         <div id="searchbar">
             <form method="get" action="<?= BASE_URL ?>/photo/search">
-                <input type="text" name="query-terms" id="searchtextbox" placeholder="Search photos by title" autocomplete="off" onkeyup="handleKeyUp(event)">
+                <input type="text" name="query-terms" id="searchtextbox" placeholder="Search photographers by title" autocomplete="off" onkeyup="handleKeyUp(event)">
                 <input type="submit" value="Go" />
             </form>
             <div id="suggestionDiv"></div>

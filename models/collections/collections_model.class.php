@@ -10,7 +10,7 @@ class CollectionsModel
 {
     private $db; //database object
     private $dbConnection; //database connection object
-
+    private $tblCollections; //Database Table
     public function __construct()
     {
         $this->db = Database::getInstance();

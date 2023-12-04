@@ -28,7 +28,7 @@ class PhotographerController {
         }
 
         // all photographers
-        $view = new PhotographerView();
+        $view = new PhotographerIndex();
         $view->display($photographers);
     }
 

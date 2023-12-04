@@ -109,8 +109,15 @@
     width: 310px;
     display: flex;
     flex-wrap: wrap;
-}
 
+}
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
 .image{
     height: 300px;
     width: 300px;
