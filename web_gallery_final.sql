@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2023 at 04:31 PM
+-- Generation Time: Dec 05, 2023 at 04:38 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -119,8 +119,8 @@ INSERT INTO `photos` (`photoID`, `size`, `camera`, `title`, `description`, `imgP
 (1, '3630 pixels x 3746 p', 'Canon EOS R3', 'Night Sky', 'Taken in the beautiful countryside, this photo invokes feelings of calm and tranquility to any fan of nature.', '.\\www\\img\\Night_Sky.jpeg', '2015-08-19', 1),
 (2, ' 3776 pixels by 5664', 'Canon EOS R3', 'Forest Pond', 'Taken during a mid-day picnic, this photo deeply reminds the viewer of the throes of childhood in Vienna.', '.\\www\\img\\Forest_Pond.jpeg', '2006-07-24', 3),
 (3, '5461 pixels by 6512 ', 'Nikon D850', 'Village Of Light', 'The photographer behind this photo experienced every part of their life in this town. Birth, marriage, retirement. When asked about the town itself, Ghassan responded with \"The town? It\'s home to me.\"', '.\\www\\img\\Village.jpeg', '1996-06-17', 5),
-(4, 'Lorem ipsum dolor si', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', '.\\www\\img\\Italian_Seaside.jpeg', '2023-11-02', 2),
-(5, 'Lorem ipsum dolor si', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', '.\\www\\img\\Wheat_Plains.jpeg', '2023-11-02', 5);
+(4, '16000px x 16000px', 'iPhone 3', 'Italian Seaside', 'Immerse yourself in the timeless allure of this Italian city. Cobblestone streets lead to historic wonders, while aromatic cafes beckon with the promise of authentic flavors. Each corner tells a story of art, history, and the undeniable charm that defines this captivating destination.\r\n\r\n\r\n\r\n\r\n\r\n', '.\\www\\img\\Italian_Seaside.jpeg', '2023-11-02', 2),
+(5, '500px x 500px', 'iPhone 17', 'Wheat Fields', 'Golden waves of wheat stretch as far as the eye can see, a vast sea of amber under the open sky. The gentle rustle of the wind whispers through the fields, creating a serene symphony of nature. In this expansive landscape, the beauty of simplicity unfolds in every swaying stalk.', '.\\www\\img\\Wheat_Plains.jpeg', '2023-11-02', 5);
 
 -- --------------------------------------------------------
 

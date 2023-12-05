@@ -7,7 +7,7 @@
  * allow the user to perform account-related actions on the site
  */
 
-class UserController {
+class LoginController {
 
 
     private $user_model;

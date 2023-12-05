@@ -36,9 +36,7 @@ static public function displayheader($page_title) {
             <p>|</p>
             <a href="<?= BASE_URL ?>/photographer/index">Photographers</a>
             <p>|</p>
-            <a href="<?= BASE_URL ?>/collection/index">Collections</a>
-            <p>|</p>
-            <a href="">Log In</a>
+            <a href="<?= BASE_URL ?>/login">Log In</a>
         </div>
     </div>
 

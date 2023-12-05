@@ -5,7 +5,7 @@
  * File : login.class.php
  * Description:
  */
-class Login extends IndexView {
+class Login extends View {
 
     public function display() {
         parent::displayHeader("Photo Store");

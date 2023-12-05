@@ -6,12 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CollectionError' => $baseDir . '/views/collection/error/collectionerror.class.php',
-    'CollectionIndex' => $baseDir . '/views/collection/index/collectionindex.class.php',
-    'CollectionView' => $baseDir . '/views/collection/collection_view.class.php',
-    'Collections' => $baseDir . '/models/collections/collections.class.php',
-    'CollectionsController' => $baseDir . '/controllers/collections_controller.php',
-    'CollectionsModel' => $baseDir . '/models/collections/collections_model.class.php',
+    'CollectionController' => $baseDir . '/controllers/collections_controller.php',
     'ComposerAutoloaderInit65a336f8c5b3c2f36a86892bd700f471' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471' => $vendorDir . '/composer/autoload_static.php',
@@ -19,9 +14,10 @@ return array(
     'Database' => $baseDir . '/application/database.class.php',
     'Dispatcher' => $baseDir . '/application/dispatcher.class.php',
     'Login' => $baseDir . '/views/user/login/login.class.php',
+    'LoginController' => $baseDir . '/controllers/user_controller.class.php',
     'Logout' => $baseDir . '/views/user/logout/logout.class.php',
     'PhotoController' => $baseDir . '/controllers/photo_controller.class.php',
-    'PhotoDetails' => $baseDir . '/views/photo/detail/photographerdetails.php',
+    'PhotoDetails' => $baseDir . '/views/photo/detail/photodetails.class.php',
     'PhotoError' => $baseDir . '/views/photo/error/photoerror.class.php',
     'PhotoIndex' => $baseDir . '/views/photo/index/photoindex.class.php',
     'PhotoModel' => $baseDir . '/models/photos/photos_model.class.php',
@@ -34,7 +30,6 @@ return array(
     'Photographers' => $baseDir . '/models/photographers/photographers.class.php',
     'PhotographersModel' => $baseDir . '/models/photographers/photographers_model.class.php',
     'Photos' => $baseDir . '/models/photos/photos.class.php',
-    'UserController' => $baseDir . '/controllers/user_controller.class.php',
     'UserError' => $baseDir . '/views/user/error/error.class.php',
     'UserRegister' => $baseDir . '/views/user/register/user_register.class.php',
     'UserRegisterVerify' => $baseDir . '/views/user/register/user_register_verify.class.php',

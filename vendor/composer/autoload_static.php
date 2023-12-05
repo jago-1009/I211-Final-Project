@@ -7,12 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
 {
     public static $classMap = array (
-        'CollectionError' => __DIR__ . '/../..' . '/views/collection/error/collectionerror.class.php',
-        'CollectionIndex' => __DIR__ . '/../..' . '/views/collection/index/collectionindex.class.php',
-        'CollectionView' => __DIR__ . '/../..' . '/views/collection/collection_view.class.php',
-        'Collections' => __DIR__ . '/../..' . '/models/collections/collections.class.php',
-        'CollectionsController' => __DIR__ . '/../..' . '/controllers/collections_controller.php',
-        'CollectionsModel' => __DIR__ . '/../..' . '/models/collections/collections_model.class.php',
+        'CollectionController' => __DIR__ . '/../..' . '/controllers/collections_controller.php',
         'ComposerAutoloaderInit65a336f8c5b3c2f36a86892bd700f471' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471' => __DIR__ . '/..' . '/composer/autoload_static.php',
@@ -20,6 +15,7 @@ class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
         'Database' => __DIR__ . '/../..' . '/application/database.class.php',
         'Dispatcher' => __DIR__ . '/../..' . '/application/dispatcher.class.php',
         'Login' => __DIR__ . '/../..' . '/views/user/login/login.class.php',
+        'LoginController' => __DIR__ . '/../..' . '/controllers/user_controller.class.php',
         'Logout' => __DIR__ . '/../..' . '/views/user/logout/logout.class.php',
         'PhotoController' => __DIR__ . '/../..' . '/controllers/photo_controller.class.php',
         'PhotoDetails' => __DIR__ . '/../..' . '/views/photo/detail/photodetails.class.php',
@@ -35,7 +31,6 @@ class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
         'Photographers' => __DIR__ . '/../..' . '/models/photographers/photographers.class.php',
         'PhotographersModel' => __DIR__ . '/../..' . '/models/photographers/photographers_model.class.php',
         'Photos' => __DIR__ . '/../..' . '/models/photos/photos.class.php',
-        'UserController' => __DIR__ . '/../..' . '/controllers/user_controller.class.php',
         'UserError' => __DIR__ . '/../..' . '/views/user/error/error.class.php',
         'UserRegister' => __DIR__ . '/../..' . '/views/user/register/user_register.class.php',
         'UserRegisterVerify' => __DIR__ . '/../..' . '/views/user/register/user_register_verify.class.php',

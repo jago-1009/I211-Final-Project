@@ -96,7 +96,7 @@ class PhotographersModel
     {
         //the select sql statement
 
-        $sql = "SELECT * FROM " .$this->tblPhotographers.
+        $sql = "SELECT * FROM ".$this->tblPhotos  .$this->tblPhotographers.
             " WHERE ". $this->tblPhotographers . ".photographerID" .
             "";
 
