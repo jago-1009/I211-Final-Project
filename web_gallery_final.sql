@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 04:38 PM
+-- Generation Time: Dec 05, 2023 at 06:06 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -22,52 +22,6 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `web_gallery` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `web_gallery`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `collections`
---
-
-CREATE TABLE `collections` (
-  `collectionID` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `description` varchar(500) NOT NULL,
-  `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `collections`
---
-
-INSERT INTO `collections` (`collectionID`, `title`, `description`, `active`) VALUES
-(1, 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 1),
-(2, 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 0),
-(3, 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 1),
-(4, 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 0),
-(5, 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `photocollection`
---
-
-CREATE TABLE `photocollection` (
-  `photoID` int(11) NOT NULL,
-  `collectionID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `photocollection`
---
-
-INSERT INTO `photocollection` (`photoID`, `collectionID`) VALUES
-(1, 1),
-(2, 1),
-(2, 3),
-(5, 4),
-(1, 3);
 
 -- --------------------------------------------------------
 
@@ -122,41 +76,9 @@ INSERT INTO `photos` (`photoID`, `size`, `camera`, `title`, `description`, `imgP
 (4, '16000px x 16000px', 'iPhone 3', 'Italian Seaside', 'Immerse yourself in the timeless allure of this Italian city. Cobblestone streets lead to historic wonders, while aromatic cafes beckon with the promise of authentic flavors. Each corner tells a story of art, history, and the undeniable charm that defines this captivating destination.\r\n\r\n\r\n\r\n\r\n\r\n', '.\\www\\img\\Italian_Seaside.jpeg', '2023-11-02', 2),
 (5, '500px x 500px', 'iPhone 17', 'Wheat Fields', 'Golden waves of wheat stretch as far as the eye can see, a vast sea of amber under the open sky. The gentle rustle of the wind whispers through the fields, creating a serene symphony of nature. In this expansive landscape, the beauty of simplicity unfolds in every swaying stalk.', '.\\www\\img\\Wheat_Plains.jpeg', '2023-11-02', 5);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `userID` int(11) NOT NULL,
-  `userName` varchar(20) NOT NULL,
-  `userPassword` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`userID`, `userName`, `userPassword`) VALUES
-(1, 'phpuser', 'phpuser');
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `collections`
---
-ALTER TABLE `collections`
-  ADD PRIMARY KEY (`collectionID`);
-
---
--- Indexes for table `photocollection`
---
-ALTER TABLE `photocollection`
-  ADD KEY `photoID` (`photoID`),
-  ADD KEY `collectionID` (`collectionID`);
 
 --
 -- Indexes for table `photographers`
@@ -172,20 +94,8 @@ ALTER TABLE `photos`
   ADD KEY `photographer` (`photographerID`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`userID`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `collections`
---
-ALTER TABLE `collections`
-  MODIFY `collectionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `photographers`
@@ -200,21 +110,8 @@ ALTER TABLE `photos`
   MODIFY `photoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `photocollection`
---
-ALTER TABLE `photocollection`
-  ADD CONSTRAINT `photocollection_ibfk_1` FOREIGN KEY (`photoID`) REFERENCES `photos` (`photoID`),
-  ADD CONSTRAINT `photocollection_ibfk_2` FOREIGN KEY (`collectionID`) REFERENCES `collections` (`collectionID`);
 
 --
 -- Constraints for table `photos`
