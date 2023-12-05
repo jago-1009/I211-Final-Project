@@ -65,5 +65,8 @@ private $photographerID, $firstName, $lastName, $birthDate, $email;
     {
         return $this->email;
     }
-
+    public function setPhotographerID($photographerID)
+    {
+        $this->photographerID = $photographerID;
+    }
 }

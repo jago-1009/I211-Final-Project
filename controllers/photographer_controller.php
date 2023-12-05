@@ -35,9 +35,9 @@ class PhotographerController {
     //  photographer
     public function detail($id) {
         //photographer
-        $photographer = $this->photographer_model->viewPhotographer($id);
+        $photographers = $this->photographer_model->viewPhotographer($id);
 
-        if (!$photographer) {
+        if (!$photographers) {
             // Display an error
             $message = "There was a problem displaying the photographer with id='" . $id . "'.";
             $this->error($message);
@@ -45,8 +45,8 @@ class PhotographerController {
         }
 
         //photographer details
-        $view = new PhotographerDetail();
-        $view->display($photographer);
+        $view = new PhotographerDetails();
+        $view->display($photographers);
     }
 
     // Search photographers

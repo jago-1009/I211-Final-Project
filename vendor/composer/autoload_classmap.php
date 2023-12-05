@@ -24,6 +24,7 @@ return array(
     'PhotoSearch' => $baseDir . '/views/photo/search/photo_search.class.php',
     'PhotoView' => $baseDir . '/views/photo/photo_view.class.php',
     'PhotographerController' => $baseDir . '/controllers/photographer_controller.php',
+    'PhotographerDetails' => $baseDir . '/views/photographer/detail/photographerdetails.class.php',
     'PhotographerError' => $baseDir . '/views/photographer/error/photographererror.class.php',
     'PhotographerIndex' => $baseDir . '/views/photographer/index/photographerindex.class.php',
     'PhotographerView' => $baseDir . '/views/photographer/photographer_view.class.php',

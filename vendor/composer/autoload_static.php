@@ -25,6 +25,7 @@ class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
         'PhotoSearch' => __DIR__ . '/../..' . '/views/photo/search/photo_search.class.php',
         'PhotoView' => __DIR__ . '/../..' . '/views/photo/photo_view.class.php',
         'PhotographerController' => __DIR__ . '/../..' . '/controllers/photographer_controller.php',
+        'PhotographerDetails' => __DIR__ . '/../..' . '/views/photographer/detail/photographerdetails.class.php',
         'PhotographerError' => __DIR__ . '/../..' . '/views/photographer/error/photographererror.class.php',
         'PhotographerIndex' => __DIR__ . '/../..' . '/views/photographer/index/photographerindex.class.php',
         'PhotographerView' => __DIR__ . '/../..' . '/views/photographer/photographer_view.class.php',

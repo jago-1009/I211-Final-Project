@@ -83,7 +83,7 @@ class Photos
     /**
      * @param mixed $photoId
      */
-    public function setId($photoId): void
+    public function setId($photoId)
     {
         $this->photoId = $photoId;
     }
