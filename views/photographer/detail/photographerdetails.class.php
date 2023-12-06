@@ -9,23 +9,13 @@ class PhotographerDetails  extends View{
 
     public function display($results) {
         $photographer = $results["Photographer"];
-        $photos = $results["photos"];
         //display page header
         parent::displayHeader("Photo Details");
         $firstName = $photographer->getFirstName();
         $lastName = $photographer->getLastName();
         $birthDate = $photographer->getBirthDate();
         $email = $photographer->getEmail();
-//        $photoID = $photos->getPhotoId();
-//        $photoImgPath = $photos->getImgPath();
-//        $photoSize = $photos->getSize();
-//        $photoCamera = $photos->getCamera();
-//        $photoDescription = $photos->getDescription();
-//        $photoTitle = $photos->getTitle();
-//        $photoCreationDate = $photos->getCreationDate();
-//        if (strpos($photoImgPath, "http://") === false and strpos($photoImgPath, "https://") === false) {
-//            $photoImgPath = BASE_URL . "/"  . $photoImgPath;
-//        }
+
         ?>
         <!DOCTYPE html>
         <html>
@@ -33,14 +23,21 @@ class PhotographerDetails  extends View{
 
         <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
         <link type='text/css' rel='stylesheet' href='../../www/styles/styles.css' />
-        <h4 class="search-back"><a href="<?= BASE_URL ?>/photo/index">< Back to Photo Gallery List</a></h4>
-        <div class="details-title"><h1><?=$firstName, $lastName ?></h1></div>
+        <h4 class="search-back"><a href="<?= BASE_URL ?>/photographer/index">< Back to Photographers</a></h4>
+        <div class="details-title"><h1> This is <?=$firstName," ", $lastName ?></h1></div>
         <!-- display product details in a table -->
         <div class="detailHolder">
         <table id="detail">
             <tr class="info">
                 <td>
-                   <h1><?=$firstName, $lastName ?></h1>
+                    <img class="photographer-img" src="<?= BASE_URL ?>/www/img/<?=$firstName, $lastName?>.jpeg">
+                   <h2>Born on <?=$birthDate ?>, they have created many photographs that continue to dazzle and wow us.</h2>
+                    <?php if (is_null($email) == true) {
+                        echo "<p>Unfortunately, this person has since left us. May their photos continue to stay in our memory forever.</p>";}
+                        else {
+                            echo "<p>If you would like to contact them, please email them at $email<p>";
+                        };
+                     ?>
                 </td>
                 <td class="infoText">
 

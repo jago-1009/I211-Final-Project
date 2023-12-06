@@ -160,6 +160,7 @@
     align-items: center;
     justify-content: center;
     width:1000px;
+    text-align: center;
 }
 .detailHolder {
     display: flex;
@@ -211,4 +212,8 @@
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
+}
+.photographer-img {
+    max-height: 300px;
+    margin-bottom: 20px;
 }

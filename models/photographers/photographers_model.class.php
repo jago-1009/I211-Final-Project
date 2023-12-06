@@ -99,8 +99,7 @@ class PhotographersModel
     {
         //the select sql statement
 
-        $sql = "SELECT * FROM " . $this->tblPhotos . "," . $this->tblPhotographers .
-            " WHERE " . $this->tblPhotographers . ".photographerID =" . $this->tblPhotos . ".photographerID AND " . $this->tblPhotographers . ".photographerID = $id";
+        $sql = "SELECT * FROM photographers WHERE photographerID = ".$id."";
 
         $query = $this->dbConnection->query($sql);
 
@@ -110,25 +109,16 @@ class PhotographersModel
 
         if ($query && $query->num_rows > 0) {
             $obj = $query->fetch_object();
-            $photos = array();
             //create a photographer object
 
             $photographer = new Photographers($obj->photographerID, $obj->firstName, $obj->lastName, $obj->birthDate, $obj->email);
             $photographer->setPhotographerID($obj->photographerID);
-            while ($query_row = $query->fetch_assoc()) {
-                $photos[] = new Photos($query_row["photoID"],
-                    $query_row["size"],
-                    $query_row["camera"],
-                    $query_row["title"],
-                    $query_row["description"],
-                    $query_row["creationDate"],
-                    $query_row["imgPath"]);
-            }
+
 
 
 //            var_dump(array("Photographer" => $photographer, "photos" => $photos));
 //            exit();
-            return array("Photographer" => $photographer, "photos" => $photos);
+            return array("Photographer" => $photographer);
         }
     }
 }
