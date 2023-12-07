@@ -57,8 +57,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
     color: black;
+    width: 100%;
+    height: 70px;
 }
 
 .hero{
@@ -100,7 +101,7 @@
 .container{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 50px;
     margin-top: 50px;
     flex-wrap: wrap;
 }
@@ -189,10 +190,19 @@
     width: 300px;
 }
 
+.search-back {
+    margin-left: 100px;
+    padding-top: 30px
+}
+
 .search-back a{
     font-size: 24px;
     text-decoration: none;
     color: black
+}
+
+.search-back a:hover{
+    text-decoration: underline solid black;
 }
 
 #searchtextbox{
@@ -208,12 +218,62 @@
     width: 100px;
 }
 
-.details-title{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-}
 .photographer-img {
     max-height: 300px;
     margin-bottom: 20px;
+}
+
+.photodetails{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.detailtext{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.details-title{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.details-desc{
+    margin-bottom: 50px;
+}
+
+.detailtext p{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.photographer-list{
+    display: flex;
+    justify-content: center;
+}
+
+.photographer-list-details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ededed;
+    height: 300px;
+    width: 250px;
+    border-radius: 30px;
+}
+
+.photographer-list-details h1{
+    width: 90%;
+    text-align: center;
+}
+
+.photographer-list a{
+    text-decoration: none;
+    color: black;
 }
