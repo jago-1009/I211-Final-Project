@@ -19,22 +19,6 @@ class PhotoController
         // PhotoModel class
         $this->photo_model = new PhotoModel();
     }
-    public function suggest($terms) {
-        //retrieve query terms
-        $query_terms = urldecode(trim($terms));
-        $movies = $this->photo_model->search_photo($query_terms);
-
-        //retrieve all movie titles and store them in an array
-        $titles = array();
-        if ($movies) {
-            foreach ($movies as $movie) {
-                $titles[] = $movie->getTitle();
-            }
-        }
-
-        echo json_encode($titles);
-    }
-
     //  displays all photos
     public function index()
     {
@@ -43,8 +27,9 @@ class PhotoController
 
         if (!$photos) {
             //  error
-            throw new DatabaseConnectionException("There was a problem displaying the photos.");
-        }
+            $message = "There was a problem displaying the photos";
+            $this->error($message);
+            return;        }
 
         //  photography products
         $view = new PhotoView();
@@ -59,8 +44,9 @@ class PhotoController
 
         if (!$photos) {
             // error
-            throw new DataMissingException("There was a problem displaying the photo id='" . $id . "'.");
-        }
+            $message = "There was a problem displaying the photo id='" . $id . "'.";
+            $this->error($message);
+            return;        }
 
         //  photo details
         $view = new PhotoDetails();
@@ -82,8 +68,9 @@ class PhotoController
 
         if (!$photos) {
             // error
-            throw new InvalidDataException("There was a problem displaying the terms='" . $terms . "'.");
-        }
+            $message = "There was a problem displaying the photos you searched for.";
+            $this->error($message);
+            return;        }
 
         //  photo details
         $view = new PhotoSearch();
@@ -104,7 +91,8 @@ class PhotoController
     // Handle
     public function __call($name, $arguments)
     {
-        throw new InvalidRouteException("Calling method '$name' caused errors. Route does not exist.");
-    }
+        $message = "Route does not exist.";
+        $this->error($message);
+        return;    }
 }
 

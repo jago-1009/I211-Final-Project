@@ -22,8 +22,9 @@ class PhotographerController {
 
         if (!$photographers) {
             //  error
-            throw new DatabaseConnectionException("There was a problem displaying the photographers.");
-        }
+            $message = "There was a problem displaying the photographers.";
+            $this->error($message);
+            return;        }
 
         // all photographers
         $view = new PhotographerIndex();
@@ -37,8 +38,9 @@ class PhotographerController {
 
         if (!$photographers) {
             // Display an error
-            throw new DataMissingException("There was a problem displaying the photographer with id='" . $id . "'.");
-        }
+            $message = "There was a problem displaying the photographer id='" . $id . "'.";
+            $this->error($message);
+            return;        }
 
         //photographer details
         $view = new PhotographerDetails();
@@ -60,8 +62,9 @@ class PhotographerController {
 
         if ($photographers === false) {
             // Handle error
-            throw new InvalidDataException("There was an error searching for your photographer");
-        }
+            $message = "There was a error searching for your photographer";
+            $this->error($message);
+            return;        }
 
         //  matched photographers
         $search = new PhotographerSearch();
@@ -79,6 +82,7 @@ class PhotographerController {
 
     // Handler
     public function __call($name, $arguments) {
-        throw new InvalidRouteException("Calling method '$name' caused errors. Route does not exist.");
-    }
+        $message = "There was a problem with the route";
+        $this->error($message);
+        return;    }
 }

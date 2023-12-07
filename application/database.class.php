@@ -26,15 +26,22 @@ class Database
     //constructor
     public function __construct()
     {
-
-        $this->objDBConnection = @new mysqli(
-            $this->param['host'],
-            $this->param['login'],
-            $this->param['password'],
-            $this->param['database']
-        );
-        if (mysqli_connect_errno() != 0) {
-           throw new DatabaseConnectionException();
+        try {
+            $this->objDBConnection = @new mysqli(
+                $this->param['host'],
+                $this->param['login'],
+                $this->param['password'],
+                $this->param['database']
+            );
+            if (mysqli_connect_errno() != 0) {
+                throw new DatabaseConnectionException("There was an error connecting to the database");
+            }
+        } catch (DatabaseConnectionException $e) {
+            $error = new Error();
+            $error->display($e->getMessage());
+        } catch (Exception $e) {
+            $error = new Error();
+            $error->display($e->getMessage());
         }
     }
 
