@@ -83,7 +83,7 @@ function displayTitles(titles) {
     }
     //display the spans in the div block
     suggestionBoxObj.innerHTML = divContent;
-    suggestionBoxObj.style.display = 'block';
+    suggestionBoxObj.style.display = 'flex';
 }
 
 //This function handles keyup event. The funcion is called for every keystroke.

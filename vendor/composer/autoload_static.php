@@ -7,7 +7,6 @@ namespace Composer\Autoload;
 class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
 {
     public static $classMap = array (
-        'CollectionController' => __DIR__ . '/../..' . '/controllers/collections_controller.php',
         'ComposerAutoloaderInit65a336f8c5b3c2f36a86892bd700f471' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471' => __DIR__ . '/..' . '/composer/autoload_static.php',
@@ -15,7 +14,6 @@ class ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471
         'Database' => __DIR__ . '/../..' . '/application/database.class.php',
         'Dispatcher' => __DIR__ . '/../..' . '/application/dispatcher.class.php',
         'Login' => __DIR__ . '/../..' . '/views/user/login/login.class.php',
-        'LoginController' => __DIR__ . '/../..' . '/controllers/user_controller.class.php',
         'Logout' => __DIR__ . '/../..' . '/views/user/logout/logout.class.php',
         'PhotoController' => __DIR__ . '/../..' . '/controllers/photo_controller.class.php',
         'PhotoDetails' => __DIR__ . '/../..' . '/views/photo/detail/photodetails.class.php',

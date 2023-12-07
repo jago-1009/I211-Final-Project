@@ -41,7 +41,7 @@ class PhotographerDetails extends View
                 ?>
             </div>
             <div class="detailimg">
-                <img class="photographer-img" src="<?= BASE_URL ?>/www/img/<?= $firstName, $lastName ?>.jpeg">
+                <img class="photographer-img" src="<?= BASE_URL ?>/www/img/<?=$firstName,$lastName?>.jpeg">
             </div>
 
         </div>

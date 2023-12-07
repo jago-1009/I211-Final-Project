@@ -6,7 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CollectionController' => $baseDir . '/controllers/collections_controller.php',
     'ComposerAutoloaderInit65a336f8c5b3c2f36a86892bd700f471' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit65a336f8c5b3c2f36a86892bd700f471' => $vendorDir . '/composer/autoload_static.php',
@@ -14,7 +13,6 @@ return array(
     'Database' => $baseDir . '/application/database.class.php',
     'Dispatcher' => $baseDir . '/application/dispatcher.class.php',
     'Login' => $baseDir . '/views/user/login/login.class.php',
-    'LoginController' => $baseDir . '/controllers/user_controller.class.php',
     'Logout' => $baseDir . '/views/user/logout/logout.class.php',
     'PhotoController' => $baseDir . '/controllers/photo_controller.class.php',
     'PhotoDetails' => $baseDir . '/views/photo/detail/photodetails.class.php',
