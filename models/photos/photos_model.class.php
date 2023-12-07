@@ -107,7 +107,7 @@ class PhotoModel
         $query = $this->dbConnection->query($sql);
 
         if (!$query) {
-            echo "failed";
+            throw new DatabaseConnectionException("Database query failed.");
         }
 
         if ($query && $query->num_rows > 0) {

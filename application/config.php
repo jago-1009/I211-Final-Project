@@ -21,4 +21,3 @@ define("BASE_URL", "http://localhost/i211/I211-Final-Project");
 // *                       settings for Photos                                        *
 // ************************************************************************************/
 //
-//define("MOVIE_IMG", "www/img/");

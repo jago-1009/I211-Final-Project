@@ -43,9 +43,7 @@ class PhotoController
 
         if (!$photos) {
             //  error
-            $message = "There was a problem displaying the photos.";
-            $this->error($message);
-            return;
+            throw new DatabaseConnectionException("There was a problem displaying the photos.");
         }
 
         //  photography products
@@ -61,9 +59,7 @@ class PhotoController
 
         if (!$photos) {
             // error
-            $message = "There was a problem displaying the photo id='" . $id . "'.";
-            $this->error($message);
-            return;
+            throw new DataMissingException("There was a problem displaying the photo id='" . $id . "'.");
         }
 
         //  photo details
@@ -86,9 +82,7 @@ class PhotoController
 
         if (!$photos) {
             // error
-            $message = "There was a problem displaying the terms='" . $terms . "'.";
-            $this->error($message);
-            return;
+            throw new InvalidDataException("There was a problem displaying the terms='" . $terms . "'.");
         }
 
         //  photo details
@@ -110,9 +104,7 @@ class PhotoController
     // Handle
     public function __call($name, $arguments)
     {
-        $message = "Calling method '$name' caused errors. Route does not exist.";
-        $this->error($message);
-        return;
+        throw new InvalidRouteException("Calling method '$name' caused errors. Route does not exist.");
     }
 }
 

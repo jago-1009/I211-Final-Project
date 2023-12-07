@@ -18,10 +18,6 @@ class Database
         'database' => 'web_gallery',
         'tblPhotos' => 'photos',
         'tblPhotographers' => 'photographers',
-        'tblCollections' => 'collections',
-
-        //UNSURE IF NEEDED
-        'tblPhotoCollections' => 'photocollection'
     );
     //define the database connection object
     private $objDBConnection = NULL;
@@ -38,7 +34,7 @@ class Database
             $this->param['database']
         );
         if (mysqli_connect_errno() != 0) {
-            exit("Connecting to database failed: " . mysqli_connect_error());
+           throw new DatabaseConnectionException();
         }
     }
 

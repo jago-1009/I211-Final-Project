@@ -37,9 +37,7 @@ class Dispatcher {
 
         //create controller instance
         if (!class_exists($controllerName)) {
-            $message = "Controller '$controllerName' does not exist.";
-            include 'error.php';
-            exit();
+           throw new DataMissingException("Controller '$controllerName' does not exist.");
         }
         $controller = new $controllerName();
 

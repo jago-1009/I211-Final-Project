@@ -32,11 +32,11 @@ static public function displayheader($page_title) {
             <a href="<?= BASE_URL ?>/index">Home</a>
         </div>
         <div class="links">
+            <p>|</p>
             <a href="<?= BASE_URL ?>/photo/index">Our Photos</a>
             <p>|</p>
             <a href="<?= BASE_URL ?>/photographer/index">Photographers</a>
-            <p>|</p>
-            <a href="<?= BASE_URL ?>/login">Log In</a>
+
         </div>
     </div>
 
