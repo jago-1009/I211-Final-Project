@@ -45,10 +45,6 @@ class PhotoDetails extends View
                     <p><strong>Camera: </strong><?= $camera ?></p>
                     <p><strong>Creation Date: </strong><?= $creationDate ?></p>
                     <p><strong>ID: </strong><?= $id ?></p>
-                    <div id="button-group">
-                        <input type="button" id="edit-button" value="   Edit   "
-                               onclick="window.location.href = '<?= BASE_URL ?>/photo/edit/<?= $id ?>'">&nbsp;
-                    </div>
                 </div>
         </div>
 
